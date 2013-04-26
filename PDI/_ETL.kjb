@@ -247,7 +247,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>285</xloc>
-      <yloc>377</yloc>
+      <yloc>351</yloc>
       </entry>
     <entry>
       <name>Fakten</name>
@@ -276,8 +276,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>285</xloc>
-      <yloc>497</yloc>
+      <xloc>286</xloc>
+      <yloc>444</yloc>
       </entry>
     <entry>
       <name>Konfig Werte lesen</name>
