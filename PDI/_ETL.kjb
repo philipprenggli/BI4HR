@@ -363,12 +363,13 @@
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
       <pass_export>N</pass_export>
-      <set_append_logfile>N</set_append_logfile>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>291</xloc>
-      <yloc>709</yloc>
+      <xloc>270</xloc>
+      <yloc>694</yloc>
       </entry>
     <entry>
       <name>DUMMY</name>
@@ -390,7 +391,6 @@
       <xloc>285</xloc>
       <yloc>771</yloc>
       </entry>
-
   </entries>
   <hops>
     <hop>
@@ -440,12 +440,21 @@
     </hop>
     <hop>
       <from>Neues Features Master</from>
+      <to>Job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Job</from>
       <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>
