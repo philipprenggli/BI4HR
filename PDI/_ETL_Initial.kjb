@@ -1,0 +1,4385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>_ETL_Initial</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2013&#47;02&#47;08 14:44:07.259</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2013&#47;02&#47;08 14:44:07.259</modified_date>
+    <parameters>
+    </parameters>
+  <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50006</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_DWH</name>
+    <server>${DWH_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${DWH_DATABASE}</database>
+    <port>${DWH_PORT}</port>
+    <username>${DWH_USER}</username>
+    <password>${DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_Staging</name>
+    <server>${STAGING_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${STAGING_DATABASE}</database>
+    <port>${STAGING_PORT}</port>
+    <username>${STAGING_USER}</username>
+    <password>${STAGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STAGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCRM</name>
+    <server>${XCRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCRM_DATABASE}</database>
+    <port>${XCRM_PORT}</port>
+    <username>${XCRM_USER}</username>
+    <password>${XCRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCXX</name>
+    <server>${XCXX_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCXX_DATABASE}</database>
+    <port>${XCXX_PORT}</port>
+    <username>${XCXX_USER}</username>
+    <password>${XCXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCXX_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XHRM</name>
+    <server>${XHRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XHRM_DATABASE}</database>
+    <port>${XHRM_PORT}</port>
+    <username>${XHRM_USER}</username>
+    <password>${XHRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XHRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+    <slaveservers>
+    </slaveservers>
+<job-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></job-log-table>
+<jobentry-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+   <pass_batchid>N</pass_batchid>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>97</yloc>
+      </entry>
+    <entry>
+      <name>Konfig Werte lesen</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Job.Filename.Directory}&#47;KonfigWerte.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>203</yloc>
+      </entry>
+    <entry>
+      <name>lp_t_dim_Tage</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Job.Filename.Directory}&#47;lp_t_dim_Tage.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>733</yloc>
+      </entry>
+    <entry>
+      <name>lp_t_dim_Zeit</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Job.Filename.Directory}&#47;lp_t_dim_Zeit.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>521</yloc>
+      </entry>
+    <entry>
+      <name>lp_t_dim_ZeitPeriode</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Job.Filename.Directory}&#47;lp_t_dim_ZeitPeriode.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>627</yloc>
+      </entry>
+    <entry>
+      <name>Struktur und Index DWH</name>
+      <description/>
+      <type>SQL</type>
+      <sql>---------------------------------------------------------
+-----------DROP TABLES-----------------------------------
+---------------------------------------------------------
+
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idZeitPeriode&apos;)
+DROP INDEX [IX_lp_t_fact_Planlohn_idZeitPeriode] ON [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idMitarbeiter&apos;)
+DROP INDEX [IX_lp_t_fact_Planlohn_idMitarbeiter] ON [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idLohnart&apos;)
+DROP INDEX [IX_lp_t_fact_Planlohn_idLohnart] ON [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idBelegung&apos;)
+DROP INDEX [IX_lp_t_fact_Planlohn_idBelegung] ON [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;idx_lp_t_fact_Planlohn_lookup&apos;)
+DROP INDEX [idx_lp_t_fact_Planlohn_lookup] ON [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_fact_Mitarbeiter_lookup&apos;)
+DROP INDEX [idx_lp_t_fact_Mitarbeiter_lookup] ON [dbo].[lp_t_fact_Mitarbeiter]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idZeitPeriode&apos;)
+DROP INDEX [IX_lp_t_fact_Lohn_idZeitPeriode] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idMitarbeiter&apos;)
+DROP INDEX [IX_lp_t_fact_Lohn_idMitarbeiter] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idLohnart&apos;)
+DROP INDEX [IX_lp_t_fact_Lohn_idLohnart] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idBelegung&apos;)
+DROP INDEX [IX_lp_t_fact_Lohn_idBelegung] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;idx_lp_t_fact_Lohn_lookup&apos;)
+DROP INDEX [idx_lp_t_fact_Lohn_lookup] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;_dta_index_lp_t_fact_Lohn_c_71_325576198__K3_K2_K1_K24&apos;)
+DROP INDEX [_dta_index_lp_t_fact_Lohn_c_71_325576198__K3_K2_K1_K24] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;_dta_index_lp_t_fact_Lohn_71_325576198__K2_K24_K1&apos;)
+DROP INDEX [_dta_index_lp_t_fact_Lohn_71_325576198__K2_K24_K1] ON [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Belegung]&apos;) AND name = N&apos;idx_lp_t_fact_Belegung_lookup&apos;)
+DROP INDEX [idx_lp_t_fact_Belegung_lookup] ON [dbo].[lp_t_fact_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_ZeitPeriode]&apos;) AND name = N&apos;_dta_index_lp_t_dim_ZeitPeriode_71_277576027__K3_K7_K4_K2_K1&apos;)
+DROP INDEX [_dta_index_lp_t_dim_ZeitPeriode_71_277576027__K3_K7_K4_K2_K1] ON [dbo].[lp_t_dim_ZeitPeriode]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND name = N&apos;idx_lp_t_dim_Tage_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Tage_tk] ON [dbo].[lp_t_dim_Tage]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND name = N&apos;idx_lp_t_dim_Tage_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Tage_lookup] ON [dbo].[lp_t_dim_Tage]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND name = N&apos;idx_lp_t_dim_Organisation_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Organisation_tk] ON [dbo].[lp_t_dim_Organisation]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND name = N&apos;idx_lp_t_dim_Organisation_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Organisation_lookup] ON [dbo].[lp_t_dim_Organisation]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_dim_Mitarbeiter_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Mitarbeiter_tk] ON [dbo].[lp_t_dim_Mitarbeiter]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_dim_Mitarbeiter_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Mitarbeiter_lookup] ON [dbo].[lp_t_dim_Mitarbeiter]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Lohnart_tk] ON [dbo].[lp_t_dim_Lohnart]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_Lookup2&apos;)
+DROP INDEX [idx_lp_t_dim_Lohnart_Lookup2] ON [dbo].[lp_t_dim_Lohnart]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Lohnart_lookup] ON [dbo].[lp_t_dim_Lohnart]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;IX_lp_t_dim_Belegung_lookup1&apos;)
+DROP INDEX [IX_lp_t_dim_Belegung_lookup1] ON [dbo].[lp_t_dim_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;idx_lp_t_dim_Belegung_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Belegung_tk] ON [dbo].[lp_t_dim_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;idx_lp_t_dim_Belegung_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Belegung_lookup] ON [dbo].[lp_t_dim_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND name = N&apos;idx_lp_t_dim_Absenz_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Absenz_tk] ON [dbo].[lp_t_dim_Absenz]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND name = N&apos;idx_lp_t_dim_Absenz_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Absenz_lookup] ON [dbo].[lp_t_dim_Absenz]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzereignis]&apos;) AND name = N&apos;idx_lp_t_dim_Absenzereignis_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Absenzereignis_tk] ON [dbo].[lp_t_dim_Absenzereignis]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzereignis]&apos;) AND name = N&apos;idx_lp_t_dim_Absenzereignis_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Absenzereignis_lookup] ON [dbo].[lp_t_dim_Absenzereignis]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzgruppe]&apos;) AND name = N&apos;idx_lp_t_dim_Absenzgruppe_tk&apos;)
+DROP INDEX [idx_lp_t_dim_Absenzgruppe_tk] ON [dbo].[lp_t_dim_Absenzgruppe]
+;
+IF  EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzgruppe]&apos;) AND name = N&apos;idx_lp_t_dim_Absenzgruppe_lookup&apos;)
+DROP INDEX [idx_lp_t_dim_Absenzgruppe_lookup] ON [dbo].[lp_t_dim_Absenzgruppe]
+;
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_v_fact_Eintritt]&apos;))
+DROP VIEW [dbo].[lp_v_fact_Eintritt]
+;
+IF  EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_v_fact_Austritt]&apos;))
+DROP VIEW [dbo].[lp_v_fact_Austritt]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Mitarbeiter]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Mitarbeiter]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Lohn]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Belegung]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Absenz]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Absenz]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_ZeitPeriode]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_ZeitPeriode]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Zeit]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Zeit]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Tage]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Organisation]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Mitarbeiter]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Lohnart]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Belegung]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Alter]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Alter]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Absenz]
+;
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Ausbildung]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Ausbildung]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Ausbildung]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Ausbildung]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzgruppe]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Absenzgruppe]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Absenzkonto]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_fact_Absenzkonto]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Absenzdatum]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_fact_Absenzdatum
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenzereignis]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_dim_Absenzereignis]
+;
+
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+
+---------------------------------------------------------
+-----------CREATE TABLES---------------------------------
+---------------------------------------------------------&#47;
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Absenz](
+	[idAbsenz] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[ControlPattern] [varchar](2) NULL,
+	[ABCKey] [int] NULL,
+	[ABTKey] [int] NULL,
+	[idInternStatus] [int] NULL,
+	[idExternStatus] [int] NULL,
+	[AbsenzkategorieCode] [varchar](15) NULL,
+	[AbsenzkategorieBez] [varchar](64) NULL,
+	[AbsenzartCode] [varchar](15) NULL,
+	[AbsenzartBez] [varchar](64) NULL,
+	[AbsenzartEinheit] [varchar](1) NULL,
+	[AbsenzartTechnischeAbsenz] [varchar](1) NULL,
+	[AbsenzartInternKalenderCode] [varchar](1) NULL,
+	[AbsenzartInternKalenderBez] [varchar](13) NULL,
+	[AbsenzartExternKalenderCode] [varchar](1) NULL,
+	[AbsenzartExternKalenderBez] [varchar](13) NULL,
+	[AbsenzartTexteingabe] [varchar](1) NULL,
+	[InternStatusCode] [varchar](15) NULL,
+	[InternStatusBez] [varchar](64) NULL,
+	[ExternStatusCode] [varchar](15) NULL,
+	[ExternStatusBez] [varchar](64) NULL,
+	[AbsenzartStatistikCode1] [varchar](15) NULL,
+	[AbsenzartStatistikCode2] [varchar](15) NULL,
+	[AbsenzartStatistikCode3] [varchar](15) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idAbsenz] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+CREATE TABLE [dbo].[lp_t_dim_Belegung](
+	[idBelegung] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[EMPKEY] [int] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[OUNKEY] [int] NULL,
+	[idMitarbeiter] [int] NULL,
+	[BelegungSequenz] [int] NULL,
+	[BelegungProzent] [decimal](9, 4) NULL,
+	[BelegungFTE] [decimal](13, 8) NULL,
+	[BelegungHC] [decimal](11, 4) NULL,
+	[idBelegungstyp] [int] NULL,
+	[lpBelegungstyp] [varchar](50) NULL,
+	[lpBelegungstypGruppe1] [varchar](50) NULL,
+	[StelleProzent] [decimal](9, 4) NULL,
+	[StelleFTE] [decimal](13, 8) NULL,
+	[StelleHC] [decimal](11, 4) NULL,
+	[StelleBewilligtProzent] [decimal](9, 4) NULL,
+	[StelleBudgetProzent] [decimal](9, 4) NULL,
+	[FunktionEnumeratorIst] [int] NULL,
+	[FunktionCodeIst] [varchar](15) NULL,
+	[FunktionBezIst] [varchar](120) NULL,
+	[FunktionGueltigIst] [varchar](1) NULL,
+	[FunktionGehaltVonIst] [decimal](11, 2) NULL,
+	[FunktionGehaltBisIst] [decimal](11, 2) NULL,
+	[FunktionWertIst] [int] NULL,
+	[FunktionEnumeratorSoll] [int] NULL,
+	[FunktionCodeSoll] [varchar](15) NULL,
+	[FunktionBezSoll] [varchar](120) NULL,
+	[FunktionGueltigSoll] [varchar](1) NULL,
+	[FunktionGehaltVonSoll] [decimal](11, 2) NULL,
+	[FunktionGehaltBisSoll] [decimal](11, 2) NULL,
+	[FunktionWertSoll] [int] NULL,
+	[RangEnumeratorIst] [int] NULL,
+	[RangCodeIst] [varchar](10) NULL,
+	[RangBezIst] [varchar](64) NULL,
+	[idRangIst] [int] NULL,
+	[lpRangIst] [varchar](100) NULL,
+	[lpRangGruppe1Ist] [varchar](50) NULL,
+	[RangEnumeratorSoll] [int] NULL,
+	[RangCodeSoll] [varchar](10) NULL,
+	[RangBezSoll] [varchar](64) NULL,
+	[idRangSoll] [int] NULL,
+	[lpRangSoll] [varchar](100) NULL,
+	[lpRangGruppe1Soll] [varchar](50) NULL,
+	[ORRangEnumeratorIst] [int] NULL,
+	[ORRangCodeIst] [varchar](10) NULL,
+	[ORRangBezIst] [varchar](64) NULL,
+	[ORRangGruppeIst] [varchar](15) NULL,
+	[idORRangIst] [int] NULL,
+	[lpORRangIst] [varchar](50) NULL,
+	[lpORRangGruppeIst] [varchar](50) NULL,
+	[ORRangEnumeratorSoll] [int] NULL,
+	[ORRangCodeSoll] [varchar](10) NULL,
+	[ORRangBezSoll] [varchar](64) NULL,
+	[ORRangGruppeSoll] [varchar](15) NULL,
+	[idORRangSoll] [int] NULL,
+	[lpORRangSoll] [varchar](50) NULL,
+	[lpORRangGruppeSoll] [varchar](50) NULL,
+	[BelegungsartEnumerator] [int] NULL,
+	[BelegungsartBez] [varchar](64) NULL,
+	[BelegungsartGueltig] [varchar](1) NULL,
+	[BelegungsartLevel] [int] NULL,
+	[BelegungsartStatus] [int] NULL,
+	[idOrganisation] [int] NULL,
+	[idOE] [int] NULL,
+	[OEBezeichnung] [varchar](64) NULL,
+	[OE1] [varchar](100) NULL,
+	[OE2] [varchar](100) NULL,
+	[OE3] [varchar](100) NULL,
+	[OE4] [varchar](100) NULL,
+	[OE5] [varchar](100) NULL,
+	[OE6] [varchar](100) NULL,
+	[OE7] [varchar](100) NULL,
+	[OE8] [varchar](100) NULL,
+	[OE9] [varchar](100) NULL,
+	[OE10] [varchar](100) NULL,
+	[OE11] [varchar](100) NULL,
+	[OE12] [varchar](100) NULL,
+	[OE13] [varchar](100) NULL,
+	[OE14] [varchar](100) NULL,
+	[Ebene1] [varchar](100) NULL,
+	[Ebene2] [varchar](100) NULL,
+	[Ebene3] [varchar](100) NULL,
+	[Ebene4] [varchar](100) NULL,
+	[Ebene5] [varchar](100) NULL,
+	[Ebene6] [varchar](100) NULL,
+	[Ebene7] [varchar](100) NULL,
+	[Ebene8] [varchar](100) NULL,
+	[Ebene9] [varchar](100) NULL,
+	[Ebene10] [varchar](100) NULL,
+	[Ebene11] [varchar](100) NULL,
+	[Ebene12] [varchar](100) NULL,
+	[Ebene13] [varchar](100) NULL,
+	[Ebene14] [varchar](100) NULL,
+	[OEEbene1] [varchar](64) NULL,
+	[OEEbene2] [varchar](64) NULL,
+	[OEEbene3] [varchar](64) NULL,
+	[OEEbene4] [varchar](64) NULL,
+	[OEEbene5] [varchar](64) NULL,
+	[OEEbene6] [varchar](64) NULL,
+	[OEEbene7] [varchar](64) NULL,
+	[OEEbene8] [varchar](64) NULL,
+	[OEEbene9] [varchar](64) NULL,
+	[OEEbene10] [varchar](64) NULL,
+	[OEEbene11] [varchar](64) NULL,
+	[OEEbene12] [varchar](64) NULL,
+	[OEEbene13] [varchar](64) NULL,
+	[OE1Var2] [varchar](100) NULL,
+	[OE2Var2] [varchar](100) NULL,
+	[OE3Var2] [varchar](100) NULL,
+	[OE4Var2] [varchar](100) NULL,
+	[OE5Var2] [varchar](100) NULL,
+	[OE6Var2] [varchar](100) NULL,
+	[OE7Var2] [varchar](100) NULL,
+	[OE8Var2] [varchar](100) NULL,
+	[OE9Var2] [varchar](100) NULL,
+	[OE10Var2] [varchar](100) NULL,
+	[OE11Var2] [varchar](100) NULL,
+	[OE12Var2] [varchar](100) NULL,
+	[OE13Var2] [varchar](100) NULL,
+	[OE14Var2] [varchar](100) NULL,
+	[StelleStatus] [varchar](14) NULL,
+	[LohnbandCodeIst] [varchar](15) NULL,
+	[LohnbandBezIst] [varchar](64) NULL,
+	[LohnbandWertIst] [int] NULL,
+	[LohnbandLohnVonIst] [decimal](11, 2) NULL,
+	[LohnbandLohnBisIst] [decimal](11, 2) NULL,
+	[LohnbandLohndurchschnittIst] [decimal](11, 2) NULL,
+	[LohnbandAlterVonIst] [int] NULL,
+	[LohnbandAlterBisIst] [int] NULL,
+	[LohnbandBandpositionIst] [varchar](3) NULL,
+	[LohnbandCodeSoll] [varchar](15) NULL,
+	[LohnbandBezSoll] [varchar](64) NULL,
+	[LohnbandWertSoll] [int] NULL,
+	[LohnbandLohnVonSoll] [decimal](11, 2) NULL,
+	[LohnbandLohnBisSoll] [decimal](11, 2) NULL,
+	[LohnbandLohndurchschnittSoll] [decimal](11, 2) NULL,
+	[LohnbandAlterVonSoll] [int] NULL,
+	[LohnbandAlterBisSoll] [int] NULL,
+	[LohnbandBandpositionSoll] [varchar](3) NULL,
+	[idFunktionIst] [int],
+	[FunktionIst] [varchar](120),
+	[FunktionGruppe1Ist] [varchar](50),
+	[FunktionGruppe2Ist] [varchar](50),
+	[FunktionGruppe3Ist] [varchar](50),
+	[idFunktionSoll] [int],
+	[FunktionSoll] [varchar](120),
+	[FunktionGruppe1Soll] [varchar](50),
+	[FunktionGruppe2Soll] [varchar](50),
+	[FunktionGruppe3Soll] [varchar](50)
+PRIMARY KEY CLUSTERED 
+(
+	[idBelegung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Lohnart](
+	[idLohnart] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[ControlPattern] [varchar](2) NULL,
+	[Lohnart] [varchar](4) NULL,
+	[LohnartBezeichnung] [varchar](64) NULL,
+	[Printgruppe] [varchar](3) NULL,
+	[PrintgruppeBezLang] [varchar](30) NULL,
+	[PrintgruppeBezKurz] [varchar](15) NULL,
+	[Printsequenz] [int] NULL,
+	[AufAbrechnung] [varchar](1) NULL,
+	[AnsatzFix] [decimal](9, 4) NULL,
+	[ProzentsatzFix] [decimal](9, 4) NULL,
+	[BetragFix] [decimal](11, 2) NULL,
+	[MengeFix] [decimal](11, 4) NULL,
+	[AdditionPK1] [int] NULL,
+	[AdditionPK2] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idLohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Mitarbeiter](
+	[idMitarbeiter] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[EMPKEY] [int] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[Nachzahlung] [int] NULL,
+	[BG] [decimal](7, 4) NULL,
+	[FTE] [decimal](11, 8) NULL,
+	[MaNR] [varchar](10) NULL,
+	[Name] [varchar](40) NULL,
+	[Vorname] [varchar](40) NULL,
+	[NameVorname] [varchar](78) NULL,
+	[Sprache] [varchar](2) NULL,
+	[idZeitGeburtstag] [int] NULL,
+	[Geburtstag] [datetime] NULL,
+	[idZeitGestorben] [int] NULL,
+	[Gestorben] [datetime] NULL,
+	[idGeschlecht] [int] NULL,
+	[lpGeschlecht] [varchar](1) NULL,
+	[lpGeschlechtBez] [varchar](20) NULL,
+	[AlterJahre] [int] NULL,
+	[EintrittJahr] [int] NULL,
+	[EintrittMonat] [int] NULL,
+	[idZeitEintritt] [int] NULL,
+	[Eintritt] [datetime] NULL,
+	[idZeitEintrittEffektiv] [int] NULL,
+	[EintrittEffektiv] [datetime] NULL,
+	[idZeitEintrittTheoretisch] [int] NULL,
+	[EintrittTheoretisch] [datetime] NULL,
+	[idZeitEintrittPK] [int] NULL,
+	[EintrittPK] [datetime] NULL,
+	[idZeitProbezeitEnde] [int] NULL,
+	[ProbezeitEnde] [datetime] NULL,
+	[EintrittBemerkung] [varchar](78) NULL,
+	[EintrittsgrundEnumerator] [int] NULL,
+	[EintrittsgrundCode] [varchar](15) NULL,
+	[EintrittsgrundBezKurz] [varchar](15) NULL,
+	[EintrittsgrundBez] [varchar](30) NULL,
+	[idEintrittsgrund] [int] NULL,
+	[lpEintrittsgrund] [varchar](100) NULL,
+	[lpEintrittsgrundGruppe1] [varchar](50) NULL,
+	[AustrittJahr] [int] NULL,
+	[AustrittMonat] [int] NULL,
+	[AustrittsPeriode] [int] NULL,
+	[AustrittsPeriodeNetto] [int] NULL,
+	[idZeitAustritt] [int] NULL,
+	[Austritt] [datetime] NULL,
+	[idZeitAustrittEffektiv] [int] NULL,
+	[AustrittEffektiv] [datetime] NULL,
+	[idZeitAustrittPK] [int] NULL,
+	[AustrittPK] [datetime] NULL,
+	[idZeitAustrittKuendigung] [int] NULL,
+	[AustrittKuendigung] [datetime] NULL,
+	[AustrittBemerkung] [varchar](78) NULL,
+	[AustrittsgrundEnumerator] [int] NULL,
+	[AustrittsgrundCode] [varchar](15) NULL,
+	[AustrittsgrundBezKurz] [varchar](15) NULL,
+	[AustrittsgrundBez] [varchar](30) NULL,
+	[idAustrittsgrund] [int] NULL,
+	[lpAustrittsgrund] [varchar](100) NULL,
+	[lpAustrittsgrundGruppe1] [varchar](50) NULL,
+	[lpAustrittsgrundNetto] [int] NULL,
+	[KSTEnumerator] [int] NULL,
+	[KSTBezKurz] [varchar](15) NULL,
+	[KSTBez] [varchar](64) NULL,
+	[FibuPatternCode] [varchar](5) NULL,
+	[FibuPatternBezeichnung] [varchar](30) NULL,
+	[FibuPatternUnternehmen] [int] NULL,
+	[FibuPatternUnternehmenBez] [varchar](40) NULL,
+	[FibuPatternBeleggruppe] [varchar](5) NULL,
+	[FibuPatternVaterCode] [varchar](5) NULL,
+	[AbrechnungskreisCode] [varchar](5) NULL,
+	[AbrechnungskreisBez] [varchar](50) NULL,
+	[VersicherungEnumerator] [int] NULL,
+	[VersicherungName] [varchar](64) NULL,
+	[VersicherungKundenNr] [varchar](2) NULL,
+	[VersicherungSubNr] [varchar](64) NULL,
+	[GesellschaftCode] [varchar](15) NULL,
+	[GesellschaftBez] [varchar](64) NULL,
+	[UVGCode] [varchar](1) NULL,
+	[UVGBez] [varchar](30) NULL,
+	[FamilienausgleichskasseEnumerator] [int] NULL,
+	[FamilienausgleichskasseCode] [varchar](10) NULL,
+	[FamilienausgleichskasseBez] [varchar](25) NULL,
+	[FamilienausgleichskasseKundenNr] [varchar](32) NULL,
+	[AHVAusgleichskasseEnumerator] [int] NULL,
+	[AHVAusgleichskasseCode] [varchar](10) NULL,
+	[AHVAusgleichskasseBez] [varchar](30) NULL,
+	[AHVAusgleichskasseMitgliedNr] [varchar](64) NULL,
+	[ASMBerufKey] [int] NULL,
+	[ASMBerufCode] [varchar](4) NULL,
+	[ASMBerufBez] [varchar](40) NULL,
+	[BerufscodeEnumerator] [int] NULL,
+	[BerufscodeCode] [varchar](8) NULL,
+	[BerufscodeBez] [varchar](30) NULL,
+	[BerufscodeStufe] [int] NULL,
+	[PersonalkategorieKeineRegulaereMA] [varchar](1) NULL,
+	[PersonalkategorieZeitBasis] [varchar](1) NULL,
+	[idPersonalkategorie] [int] NULL,
+	[lpPersonalkategorie] [varchar](50) NULL,
+	[lpPersonalkategorieGruppe1] [varchar](50) NULL,
+	[VertragsartEnumerator] [int] NULL,
+	[VertragsartCode] [varchar](10) NULL,
+	[VertragsartBez] [varchar](30) NULL,
+	[VertragsartBezKurz] [varchar](15) NULL,
+	[idVertragsart] [int] NULL,
+	[lpVertragsart] [varchar](50) NULL,
+	[lpVertragsartGruppe1] [varchar](50) NULL,
+	[UnternehmenNr] [int] NULL,
+	[UnternehmenBez] [varchar](40) NULL,
+	[idUnternehmen] [int] NULL,
+	[lpUnternehmen] [varchar](50) NULL,
+	[lpUnternehmenGruppe1] [varchar](50) NULL,
+	[VersicherungVertragNr] [varchar](20) NULL,
+	[PersonalkategorieEnumerator] [int] NULL,
+	[PersonalkategorieCode] [varchar](15) NULL,
+	[PersonalkategorieBez] [varchar](30) NULL,
+	[PersonalkategorieBezKurz] [varchar](15) NULL,
+	[Eintrittsperiode] [int] NULL,
+	[Adresszeile1] [varchar](40) NULL,
+	[Adresszeile2] [varchar](40) NULL,
+	[AdresszeileNr] [int] NULL,
+	[AdresszeileNrCode] [varchar](8) NULL,
+	[PLZ] [varchar](11) NULL,
+	[Ort] [varchar](40) NULL,
+	[KantonKurz] [varchar](30) NULL,
+	[LandKurz] [varchar](3) NULL,
+	[AlterGruppe1] [varchar](50) NULL,
+	[AlterGruppe2] [varchar](50) NULL,
+	[AlterGruppe3] [varchar](50) NULL,
+	[KalenderEnumerator] [INT] NULL,
+	[KalenderCode] [VARCHAR](15) NULL,
+	[KalenderBez] [VARCHAR](64) NULL,
+	[ArbeitstagEnumerator] [INT] NULL,
+	[ArbeitstagCode] [VARCHAR](15) NULL,
+	[ArbeitstagBez] [VARCHAR](64) NULL,
+	[BURNr] [VARCHAR](20) NULL,
+	[BURBez] [VARCHAR](64) NULL
+ CONSTRAINT [PK__lp_t_dim__EE4E426B08EA5793] PRIMARY KEY CLUSTERED 
+(
+	[idMitarbeiter] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Organisation](
+	[idOrganisation] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[idOE] [int] NULL,
+	[OEBezeichnung] [varchar](64) NULL,
+	[OE1] [varchar](100) NULL,
+	[OE2] [varchar](100) NULL,
+	[OE3] [varchar](100) NULL,
+	[OE4] [varchar](100) NULL,
+	[OE5] [varchar](100) NULL,
+	[OE6] [varchar](100) NULL,
+	[OE7] [varchar](100) NULL,
+	[OE8] [varchar](100) NULL,
+	[OE9] [varchar](100) NULL,
+	[OE10] [varchar](100) NULL,
+	[OE11] [varchar](100) NULL,
+	[OE12] [varchar](100) NULL,
+	[OE13] [varchar](100) NULL,
+	[OE14] [varchar](100) NULL,
+	[Ebene1] [varchar](100) NULL,
+	[Ebene2] [varchar](100) NULL,
+	[Ebene3] [varchar](100) NULL,
+	[Ebene4] [varchar](100) NULL,
+	[Ebene5] [varchar](100) NULL,
+	[Ebene6] [varchar](100) NULL,
+	[Ebene7] [varchar](100) NULL,
+	[Ebene8] [varchar](100) NULL,
+	[Ebene9] [varchar](100) NULL,
+	[Ebene10] [varchar](100) NULL,
+	[Ebene11] [varchar](100) NULL,
+	[Ebene12] [varchar](100) NULL,
+	[Ebene13] [varchar](100) NULL,
+	[Ebene14] [varchar](100) NULL,
+	[OEEbene1] [varchar](64) NULL,
+	[OEEbene2] [varchar](64) NULL,
+	[OEEbene3] [varchar](64) NULL,
+	[OEEbene4] [varchar](64) NULL,
+	[OEEbene5] [varchar](64) NULL,
+	[OEEbene6] [varchar](64) NULL,
+	[OEEbene7] [varchar](64) NULL,
+	[OEEbene8] [varchar](64) NULL,
+	[OEEbene9] [varchar](64) NULL,
+	[OEEbene10] [varchar](64) NULL,
+	[OEEbene11] [varchar](64) NULL,
+	[OEEbene12] [varchar](64) NULL,
+	[OEEbene13] [varchar](64) NULL,
+	[OE1Var2] [varchar](100) NULL,
+	[OE2Var2] [varchar](100) NULL,
+	[OE3Var2] [varchar](100) NULL,
+	[OE4Var2] [varchar](100) NULL,
+	[OE5Var2] [varchar](100) NULL,
+	[OE6Var2] [varchar](100) NULL,
+	[OE7Var2] [varchar](100) NULL,
+	[OE8Var2] [varchar](100) NULL,
+	[OE9Var2] [varchar](100) NULL,
+	[OE10Var2] [varchar](100) NULL,
+	[OE11Var2] [varchar](100) NULL,
+	[OE12Var2] [varchar](100) NULL,
+	[OE13Var2] [varchar](100) NULL,
+	[OE14Var2] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idOrganisation] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Planlohn](
+	[idPlanlohn] [int] NULL,
+	[PlanlohnCode] [nvarchar](10) NULL,
+	[Planlohn] [nvarchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Tage](
+	[idTage] [int] NOT NULL,
+	[version] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[AnzahlTage] [int] NULL,
+	[Gruppe1] [varchar](61) NULL,
+	[Gruppe2] [varchar](61) NULL,
+	[Gruppe3] [varchar](61) NULL,
+	[Gruppe1Sortierung] [int] NULL,
+	[Gruppe2Sortierung] [int] NULL,
+	[Gruppe3Sortierung] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idTage] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Zeit]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_Zeit](
+	[idZeit] [int] NULL,
+	[Datum] [datetime] NULL,
+	[DatumString] [nvarchar](50) NULL,
+	[Jahr] [int] NULL,
+	[Monat] [int] NULL,
+	[TagJahr] [int] NULL,
+	[TagMonat] [int] NULL,
+	[TagWoche] [int] NULL,
+	[WocheJahr] [int] NULL,
+	[TagName] [varchar](30) NULL,
+	[TagNameKurz] [varchar](3) NULL,
+	[MonatName] [varchar](30) NULL,
+	[MonatNameKurz] [varchar](3) NULL,
+	[Quartal] [varchar](1) NULL,
+	[DatumKurz] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_ZeitPeriode]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_dim_ZeitPeriode](
+	[idZeitPeriode] [int] NOT NULL,
+	[Periode] [int] NULL,
+	[Jahr] [int] NULL,
+	[Monat] [int] NULL,
+	[MonatName] [varchar](30) NULL,
+	[MonatNameKurz] [varchar](3) NULL,
+	[Quartal] [varchar](1) NULL,
+	[version] [INT] NULL,
+	[DatumVon] DATETIME NULL,
+	[DatumBis] DATETIME NULL
+ CONSTRAINT [PK_lp_t_dim_ZeitPeriode] PRIMARY KEY CLUSTERED 
+(
+	[idZeitPeriode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Absenz]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_fact_Absenz](
+	[AbsenzDatumVon] [datetime] NULL,
+	[idStatusDatumVon] [varchar](1) NULL,
+	[StatusDatumVonBez] [varchar](10) NULL,
+	[AbsenzZeitVon] [datetime] NULL,
+	[AbsenzDatumBis] [datetime] NULL,
+	[idStatusDatumBis] [varchar](1) NULL,
+	[StatusDatumBisBez] [varchar](10) NULL,
+	[AbsenzZeitBis] [datetime] NULL,
+	[Gewichtung] [decimal](9, 4) NULL,
+	[ArbeitsTage] [decimal](10, 4) NULL,
+	[StatistikTage] [decimal](10, 4) NULL,
+	[ArbeitsStunden] [decimal](10, 4) NULL,
+	[InternEinheit] [decimal](10, 4) NULL,
+	[InternEinheitAlternative] [decimal](10, 4) NULL,
+	[InternTageBerechnet] [decimal](10, 4) NULL,
+	[InternGewichtung] [decimal](9, 4) NULL,
+	[ExternTage] [decimal](10, 4) NULL,
+	[ExternTageBerechnet] [decimal](10, 4) NULL,
+	[ExternGewichtung] [decimal](9, 4) NULL,
+	[AbsenzText] [varchar](64) NULL,
+	[AbsenzAktion] [varchar](1) NULL,
+	[PostingState] [varchar](1) NULL,
+	[Quantitaet1] [decimal](11, 4) NULL,
+	[Quantitaet2] [decimal](11, 4) NULL,
+	[LogicalDelete] [varchar](1) NULL,
+	[TechnischeAbsenz] [varchar](1) NULL,
+	[AbsenzTage] [decimal](10, 5) NULL,
+	[AbsenzStunden] [decimal](10, 5) NULL,
+	[idBelegungstyp] [int] NULL,
+	[idMitarbeiter] [int] NULL,
+	[idBelegung] [int] NULL,
+	[idZeitPeriodeVon] [int] NULL,
+	[idAbsenz] [int] NULL,
+	[idZeitVon] [int] NULL,
+	[idZeitBis] [int] NULL,
+	[idZeitPeriodeBis] [int] NULL,
+	[idTage] [int] NULL,
+	[idAbsenzereignis] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Belegung]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_fact_Belegung](
+	[Stichtag] [datetime] NULL,
+	[ASNID] [int] NULL,
+	[idZeitStichtag] [int] NULL,
+	[BelegungSequenz] [int] NULL,
+	[EMPKEY] [int] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[OUNKEY] [int] NULL,
+	[BelegungProzent] [decimal](9, 4) NULL,
+	[BelegungFTE] [decimal](13, 8) NULL,
+	[BelegungHC] [decimal](11, 4) NULL,
+	[StelleProzent] [decimal](9, 4) NULL,
+	[StelleFTE] [decimal](13, 8) NULL,
+	[StelleHC] [decimal](11, 4) NULL,
+	[StelleBewilligtProzent] [decimal](9, 4) NULL,
+	[StelleBudgetProzent] [decimal](9, 4) NULL,
+	[idOrganisation] [int] NULL,
+	[idMitarbeiter] [int] NULL,
+	[idBelegung] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_fact_Lohn](
+	[idMitarbeiter] [int] NULL,
+	[idZeitPeriode] [int] NULL,
+	[idLohnart] [int] NULL,
+	[Periode] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[EMPKEY] [int] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[ControlPattern] [varchar](2) NULL,
+	[Lohnart] [varchar](4) NULL,
+	[Jahr] [int] NULL,
+	[Monat] [int] NULL,
+	[SALLINE] [int] NULL,
+	[LohnlaufNr] [int] NULL,
+	[Menge] [decimal](11, 4) NULL,
+	[Ansatz] [decimal](9, 4) NULL,
+	[Betrag] [decimal](11, 2) NULL,
+	[Prozentsatz] [decimal](9, 4) NULL,
+	[Basis] [decimal](11, 2) NULL,
+	[Bemerkung] [varchar](64) NULL,
+	[Sprache] [varchar](2) NULL,
+	[idBelegung] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Mitarbeiter]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_fact_Mitarbeiter](
+	[idMitarbeiter] [int] NULL,
+	[Periode] [int] NULL,
+	[Jahr] [int] NULL,
+	[Monat] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL,
+	[BG] [decimal](7, 4) NULL,
+	[AustrittJahr] [int] NULL,
+	[AustrittMonat] [int] NULL,
+	[idZeitGeburtstag] [int] NULL,
+	[idZeitGestorben] [int] NULL,
+	[idZeitEintritt] [int] NULL,
+	[idZeitEintrittEffektiv] [int] NULL,
+	[idZeitEintrittTheoretisch] [int] NULL,
+	[idZeitAustritt] [int] NULL,
+	[idZeitAustrittEffektiv] [int] NULL,
+	[idZeitEintrittPK] [int] NULL,
+	[idZeitAustrittPK] [int] NULL,
+	[HC] [int] NULL,
+	[Austrittsperiode] [int] NULL,
+	[AustrittsperiodeNetto] [int] NULL,
+	[idZeitPeriode] [int] NULL,
+	[FTE] [decimal](11, 8) NULL,
+	[idBelegung] [int] NULL,
+	[Monatslohn] [decimal](11, 2) NULL,
+	[Jahreslohn] [decimal](22, 2) NULL,
+	[Eintrittsperiode] [int] NULL,
+	[AlterJahre] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_fact_Planlohn](
+	[EMPKEY] [int] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[ControlPattern] [varchar](2) NULL,
+	[Lohnart] [varchar](4) NULL,
+	[Periode] [int] NULL,
+	[SALLINE] [int] NULL,
+	[Jahr] [int] NULL,
+	[Monat] [int] NULL,
+	[JahrBis] [int] NULL,
+	[MonatBis] [int] NULL,
+	[Menge] [decimal](11, 4) NULL,
+	[Ansatz] [decimal](9, 4) NULL,
+	[Betrag] [decimal](11, 2) NULL,
+	[Prozentsatz] [decimal](9, 4) NULL,
+	[Bemerkung] [varchar](64) NULL,
+	[Importlauf] [int] NULL,
+	[PeriodeVon] [int] NULL,
+	[PeriodeBis] [int] NULL,
+	[Stichtag] [datetime] NULL,
+	[idBelegungstyp] [int] NULL,
+	[idMitarbeiter] [int] NULL,
+	[idLohnart] [int] NULL,
+	[idBelegung] [int] NULL,
+	[idZeitPeriode] [int] NULL,
+	[idPlanlohn] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_v_fact_Austritt]&apos;))
+EXEC dbo.sp_executesql @statement = N&apos;
+create view [dbo].[lp_v_fact_Austritt]
+AS
+select * from lp_t_fact_Mitarbeiter where Austrittsperiode = 1
+
+&apos; 
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_v_fact_Eintritt]&apos;))
+EXEC dbo.sp_executesql @statement = N&apos;
+create view [dbo].[lp_v_fact_Eintritt]
+AS
+select * from lp_t_fact_Mitarbeiter where Eintrittsperiode = 1
+
+&apos; 
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND name = N&apos;idx_lp_t_dim_Absenz_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Absenz_lookup] ON [dbo].[lp_t_dim_Absenz]
+(
+	[ControlPattern] ASC,
+	[ABCKey] ASC,
+	[ABTKey] ASC,
+	[idInternStatus] ASC,
+	[idExternStatus] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Absenz]&apos;) AND name = N&apos;idx_lp_t_dim_Absenz_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Absenz_tk] ON [dbo].[lp_t_dim_Absenz]
+(
+	[idAbsenz] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;idx_lp_t_dim_Belegung_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Belegung_lookup] ON [dbo].[lp_t_dim_Belegung]
+(
+	[EMPKEY] ASC,
+	[CONNUMB] ASC,
+	[OUNKEY] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;idx_lp_t_dim_Belegung_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Belegung_tk] ON [dbo].[lp_t_dim_Belegung]
+(
+	[idBelegung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Belegung]&apos;) AND name = N&apos;IX_lp_t_dim_Belegung_lookup1&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_dim_Belegung_lookup1] ON [dbo].[lp_t_dim_Belegung]
+(
+	[idMitarbeiter] ASC,
+	[idBelegungstyp] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Lohnart_lookup] ON [dbo].[lp_t_dim_Lohnart]
+(
+	[ControlPattern] ASC,
+	[Lohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_Lookup2&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Lohnart_Lookup2] ON [dbo].[lp_t_dim_Lohnart]
+(
+	[idLohnart] ASC,
+	[version] ASC,
+	[DatumVon] ASC,
+	[DatumBis] ASC,
+	[ControlPattern] ASC,
+	[Lohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Lohnart]&apos;) AND name = N&apos;idx_lp_t_dim_Lohnart_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Lohnart_tk] ON [dbo].[lp_t_dim_Lohnart]
+(
+	[idLohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_dim_Mitarbeiter_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Mitarbeiter_lookup] ON [dbo].[lp_t_dim_Mitarbeiter]
+(
+	[EMPKEY] ASC,
+	[CONNUMB] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_dim_Mitarbeiter_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Mitarbeiter_tk] ON [dbo].[lp_t_dim_Mitarbeiter]
+(
+	[idMitarbeiter] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND name = N&apos;idx_lp_t_dim_Organisation_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Organisation_lookup] ON [dbo].[lp_t_dim_Organisation]
+(
+	[idOE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Organisation]&apos;) AND name = N&apos;idx_lp_t_dim_Organisation_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Organisation_tk] ON [dbo].[lp_t_dim_Organisation]
+(
+	[idOrganisation] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND name = N&apos;idx_lp_t_dim_Tage_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Tage_lookup] ON [dbo].[lp_t_dim_Tage]
+(
+	[AnzahlTage] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_Tage]&apos;) AND name = N&apos;idx_lp_t_dim_Tage_tk&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_dim_Tage_tk] ON [dbo].[lp_t_dim_Tage]
+(
+	[idTage] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_dim_ZeitPeriode]&apos;) AND name = N&apos;_dta_index_lp_t_dim_ZeitPeriode_71_277576027__K3_K7_K4_K2_K1&apos;)
+CREATE NONCLUSTERED INDEX [_dta_index_lp_t_dim_ZeitPeriode_71_277576027__K3_K7_K4_K2_K1] ON [dbo].[lp_t_dim_ZeitPeriode]
+(
+	[Jahr] ASC,
+	[Quartal] ASC,
+	[Monat] ASC,
+	[Periode] ASC,
+	[idZeitPeriode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Belegung]&apos;) AND name = N&apos;idx_lp_t_fact_Belegung_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_fact_Belegung_lookup] ON [dbo].[lp_t_fact_Belegung]
+(
+	[Stichtag] ASC,
+	[ASNID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;_dta_index_lp_t_fact_Lohn_71_325576198__K2_K24_K1&apos;)
+CREATE NONCLUSTERED INDEX [_dta_index_lp_t_fact_Lohn_71_325576198__K2_K24_K1] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idZeitPeriode] ASC,
+	[idBelegung] ASC,
+	[idMitarbeiter] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;_dta_index_lp_t_fact_Lohn_c_71_325576198__K3_K2_K1_K24&apos;)
+CREATE NONCLUSTERED INDEX [_dta_index_lp_t_fact_Lohn_c_71_325576198__K3_K2_K1_K24] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idLohnart] ASC,
+	[idZeitPeriode] ASC,
+	[idMitarbeiter] ASC,
+	[idBelegung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;idx_lp_t_fact_Lohn_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_fact_Lohn_lookup] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idMitarbeiter] ASC,
+	[idZeitPeriode] ASC,
+	[idLohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idBelegung&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Lohn_idBelegung] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idBelegung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idLohnart&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Lohn_idLohnart] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idLohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idMitarbeiter&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Lohn_idMitarbeiter] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idMitarbeiter] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Lohn]&apos;) AND name = N&apos;IX_lp_t_fact_Lohn_idZeitPeriode&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Lohn_idZeitPeriode] ON [dbo].[lp_t_fact_Lohn]
+(
+	[idZeitPeriode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Mitarbeiter]&apos;) AND name = N&apos;idx_lp_t_fact_Mitarbeiter_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_fact_Mitarbeiter_lookup] ON [dbo].[lp_t_fact_Mitarbeiter]
+(
+	[idMitarbeiter] ASC,
+	[Periode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+SET ANSI_PADDING ON
+
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;idx_lp_t_fact_Planlohn_lookup&apos;)
+CREATE NONCLUSTERED INDEX [idx_lp_t_fact_Planlohn_lookup] ON [dbo].[lp_t_fact_Planlohn]
+(
+	[EMPKEY] ASC,
+	[CONNUMB] ASC,
+	[ControlPattern] ASC,
+	[Lohnart] ASC,
+	[Periode] ASC,
+	[SALLINE] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idBelegung&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Planlohn_idBelegung] ON [dbo].[lp_t_fact_Planlohn]
+(
+	[idBelegung] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idLohnart&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Planlohn_idLohnart] ON [dbo].[lp_t_fact_Planlohn]
+(
+	[idLohnart] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idMitarbeiter&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Planlohn_idMitarbeiter] ON [dbo].[lp_t_fact_Planlohn]
+(
+	[idMitarbeiter] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_fact_Planlohn]&apos;) AND name = N&apos;IX_lp_t_fact_Planlohn_idZeitPeriode&apos;)
+CREATE NONCLUSTERED INDEX [IX_lp_t_fact_Planlohn_idZeitPeriode] ON [dbo].[lp_t_fact_Planlohn]
+(
+	[idZeitPeriode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+CREATE TABLE lp_t_dim_Ausbildung
+(
+  idAusbildung INT PRIMARY KEY
+, version INT
+, DatumVon DATETIME
+, DatumBis DATETIME
+, EVTKEY INT
+, TeilnahmestatusEnumerator VARCHAR(1)
+, Teilnahmestatus2Enumerator INT
+, HotelstatusEnumerator VARCHAR(1)
+, EVGKEY INT
+, Kursnummer VARCHAR(15)
+, Kursbezeichnung1 VARCHAR(64)
+, Kursbezeichnung2 VARCHAR(64)
+, Kursverantworlicher_EMPKEY INT
+, KursStatusEnumerator VARCHAR(1)
+, KursStatusBezeichnung VARCHAR(12)
+, KursWebStatusEnumerator VARCHAR(1)
+, KursWebStatusBezeichnung VARCHAR(12)
+, KursGruppe VARCHAR(40)
+, UnternehmenNr INT
+, Unternehmen VARCHAR(40)
+, KSTEnumerator INT
+, KSTBezKurz VARCHAR(10)
+, KSTBez VARCHAR(64)
+, BereichEnumerator INT
+, BereichCode VARCHAR(15)
+, BereichBezeichnung VARCHAR(64)
+, KursTyp VARCHAR(1)
+, Status2Enumerator INT
+, Status2Code VARCHAR(15)
+, Status2Bezeichnung VARCHAR(64)
+, Anlassnummer VARCHAR(15)
+, Anlassjahr INT
+, AnlassKurstage DECIMAL(5,2)
+, AnlassStartdatum DATETIME
+, AnlassEnddatum DATETIME
+, AnlassMinTeilnehmer INT
+, AnlassMaxTeilnehmer INT
+, AnlassBelegstatusEnumerator VARCHAR(1)
+, AnlassBelegstatusBezeichnung VARCHAR(12)
+, AnlassGesperrt VARCHAR(1)
+, AnlassStatusEnumerator VARCHAR(1)
+, AnlassStatusBezeichnung VARCHAR(12)
+, AnlassWebStatusEnumerator VARCHAR(1)
+, AnlassWebStatusBezeichnung VARCHAR(12)
+, KursspracheCode VARCHAR(2)
+, KursspracheBezeichnung VARCHAR(8)
+, Teilnahmestatus VARCHAR(27)
+, Teilnahmestatus2Code VARCHAR(15)
+, Teilnahmestatus2Bezeichnung VARCHAR(64)
+, Hotelstatus VARCHAR(16)
+)
+;CREATE INDEX idx_lp_t_dim_Ausbildung_lookup
+ ON lp_t_dim_Ausbildung
+( 
+  EVTKEY
+, TeilnahmestatusEnumerator
+, Teilnahmestatus2Enumerator
+, HotelstatusEnumerator
+)
+;
+CREATE INDEX idx_lp_t_dim_Ausbildung_tk
+ ON lp_t_dim_Ausbildung
+( 
+  idAusbildung
+)
+;
+CREATE TABLE lp_t_fact_Ausbildung
+(
+  REGKEY INT
+, AnmeldungAnzahl INT
+, AnlassKurstage DECIMAL(5,2)
+, idAusbildung INT
+, Stichtag DATETIME
+, idBelegungstyp INT
+, idMitarbeiter INT
+, idBelegung INT
+, idZeitAnkunft INT
+, idZeitAbreise INT
+, idZeitAnmeldung INT
+, idZeitAbmeldung INT
+)
+;
+CREATE TABLE lp_t_dim_Absenzgruppe
+(
+  idAbsenzgruppe INT PRIMARY KEY
+, version INT
+, DatumVon DATETIME
+, DatumBis DATETIME
+, AbsenzkontoEnumerator INT
+, AbsenzgruppeEnumerator INT
+, ABTKey INT
+, COPKEY VARCHAR(2)
+, AbsenzkontoCode VARCHAR(15)
+, AbsenzkontoBezeichnung VARCHAR(64)
+, AbsenzgruppeCode VARCHAR(15)
+, AbsenzgruppeBezeichnung VARCHAR(64)
+, AbsenzgruppeTotalzeile VARCHAR(1)
+, AbsenzgruppePosition INT
+)
+;CREATE INDEX idx_lp_t_dim_Absenzgruppe_lookup
+ ON lp_t_dim_Absenzgruppe
+( 
+  AbsenzkontoEnumerator
+, AbsenzgruppeEnumerator
+, ABTKey
+)
+;
+CREATE INDEX idx_lp_t_dim_Absenzgruppe_tk
+ ON lp_t_dim_Absenzgruppe
+( 
+  idAbsenzgruppe
+)
+;
+CREATE TABLE lp_t_fact_Absenzkonto
+(
+  COPKEY VARCHAR(2)
+, AbsenzkontoEnumerator INT
+, AbsenzkontoCode VARCHAR(15)
+, AbsenzkontoBezeichnung VARCHAR(64)
+, AbsenzgruppeEnumerator INT
+, AbsenzgruppeCode VARCHAR(15)
+, AbsenzgruppeBezeichnung VARCHAR(64)
+, AbsenzgruppeTotalzeile VARCHAR(1)
+, AbsenzgruppePosition INT
+, EMPKEY INT
+, CONNUMB VARCHAR(1)
+, AbsenzEnumerator INT
+, AbsenzDatumVon DATETIME
+, AbsenzDatumBis DATETIME
+, AbsenzText VARCHAR(64)
+, AbsenzTageKonto DECIMAL(12,5)
+, AbsenzStundenKonto DECIMAL(12,5)
+, AbsenzEreignisEnumerator INT
+, AbsenzEreignisCode VARCHAR(15)
+, AbsenzEreignisBezeichnung VARCHAR(64)
+, Stichtag DATETIME
+, idBelegungstyp INT
+, idMitarbeiter INT
+, idBelegung INT
+, idZeit INT
+, Jahr INT
+, Monat INT
+, idZeitPeriode INT
+, idAbsenz INT
+, idAbsenzgruppe INT
+)
+;
+CREATE TABLE lp_t_fact_Absenzdatum
+(
+  EMPKEY INT
+, Datum DATETIME
+, Wochentag INT
+, idMitarbeiter INT
+, idBelegung INT
+, idZeit INT
+, idAbsenz INT
+, Absenztage FLOAT(53)
+, Feiertage DECIMAL(2,1)
+, Arbeitstage DECIMAL(2,1)
+)
+;
+CREATE TABLE lp_t_dim_Absenzereignis
+(
+  idAbsenzereignis INT PRIMARY KEY
+, version INT
+, DatumVon DATETIME
+, DatumBis DATETIME
+, EMPKEY INT
+, CONNUMB VARCHAR(1)
+, ABEKEY INT
+, AbsenzereignisCode VARCHAR(15)
+, AbsenzereignisBez VARCHAR(64)
+)
+;CREATE INDEX idx_lp_t_dim_Absenzereignis_lookup
+ ON lp_t_dim_Absenzereignis
+( 
+  EMPKEY
+, CONNUMB
+, ABEKEY
+)
+;
+CREATE INDEX idx_lp_t_dim_Absenzereignis_tk
+ ON lp_t_dim_Absenzereignis
+( 
+  idAbsenzereignis
+)
+;
+
+
+
+
+
+
+
+---------------------------------------------------------
+-----------INSERT----------------------------------------
+---------------------------------------------------------
+
+INSERT [lp_t_dim_Planlohn] ([idPlanlohn], [PlanlohnCode], [Planlohn]) VALUES (1, N&apos;J&apos;, N&apos;Planlohn&apos;)
+INSERT [lp_t_dim_Planlohn] ([idPlanlohn], [PlanlohnCode], [Planlohn]) VALUES (2, N&apos;N&apos;, N&apos;Einmalig&apos;)
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>Pentaho_DWH</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>415</yloc>
+      </entry>
+    <entry>
+      <name>Struktur und Index  Staging</name>
+      <description/>
+      <type>SQL</type>
+      <sql>---------------------------------------------------------
+-----------DROP TABLES-----------------------------------
+---------------------------------------------------------
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_tmp_Planlohn]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_OrgStichtag]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_tmp_OrgStichtag]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_Organisation]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_tmp_Organisation]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_LohnPerioden]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_tmp_LohnPerioden]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMWGB]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMWGB]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMUVI]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMUVI]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMUVG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMUVG]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSSE]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMSSE]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSAT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMSAT]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSAL]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMSAL]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMRAL]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMRAL]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMRAI]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMRAI]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPRO]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMPRO]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPGR]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMPGR]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPCA]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMPCA]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPAY]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMPAY]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMOUN]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMOUN]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMORG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMORG]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMLEM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMLEM]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMIDE]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMIDE]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMICD]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMICD]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMFUN]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMFUN]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMFIP]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMFIP]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMFES]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMFES]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMENM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMENM]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEMP]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMEMP]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEMC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMEMC]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMELH]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMELH]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMCOT]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCON]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMCON]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMCOM]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOH]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMCOH]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCAC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMCAC]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMBRA]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMBRA]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAST]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMAST]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMASN]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMASN]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMASM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMASM]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAPC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMAPC]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAGT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMAGT]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAEA]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMAEA]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACI]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMACI]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMACG]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMACC]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABZ]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABZ]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABT]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABS]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABS]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABR]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABR]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABG]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABE]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABE]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_HRMABC]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_CX4CPT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_CX4CPT]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADICD]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_ADICD]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADCI]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_ADCI]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADADAS]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_ADADAS]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADAD]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].[lp_t_stage_ADAD]
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSEM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMSEM
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEVT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEVT
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEGT]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEGT
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMREG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMREG
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMMOD]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMMOD
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEVM]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEVM
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEVG]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEVG
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEGS]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEGS
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEDD]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMEDD
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMWRK]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMWRK
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABP]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMABP
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCPA]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMCPA
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCAL]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMCAL
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMHOL]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMHOL
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMRUS]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMRUS
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMETS]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMETS
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMETY]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMETY
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMBFC]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMBFC
+;
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMBUR]&apos;) AND type in (N&apos;U&apos;))
+DROP TABLE [dbo].lp_t_stage_HRMBUR
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+
+---------------------------------------------------------
+-----------CREATE TABLES---------------------------------
+---------------------------------------------------------&#47;
+
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADAD]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_ADAD](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[ADphA] [bigint] NULL,
+	[AD6mA] [varchar](1) NULL,
+	[ADelA] [bigint] NULL,
+	[ADpiA] [varchar](1) NULL,
+	[ADpjA] [varchar](40) NULL,
+	[ADljA] [varchar](40) NULL,
+	[ADpkA] [int] NULL,
+	[ADplA] [varchar](8) NULL,
+	[ADlkA] [varchar](40) NULL,
+	[ADkdA] [bigint] NULL,
+	[ADpmA] [varchar](6) NULL,
+	[ADpnA] [varchar](4) NULL,
+	[ADpoA] [varchar](12) NULL,
+	[ADppA] [varchar](6) NULL,
+	[ADpqA] [varchar](4) NULL,
+	[ADprA] [varchar](12) NULL,
+	[ADpsA] [varchar](6) NULL,
+	[ADptA] [varchar](4) NULL,
+	[ADpuA] [varchar](12) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADADAS]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_ADADAS](
+	[US15A] [bigint] NULL,
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[AD15sA] [varchar](1) NULL,
+	[ADbsA] [bigint] NULL,
+	[ADbtA] [bigint] NULL,
+	[ADphA] [bigint] NULL,
+	[ADfaA] [varchar](3) NULL,
+	[AD167A] [datetime] NULL,
+	[ADq8A] [datetime] NULL,
+	[AD15tA] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADCI]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_ADCI](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[ADkdA] [bigint] NULL,
+	[ADkeA] [varchar](11) NULL,
+	[ADkfA] [int] NULL,
+	[ADkgA] [int] NULL,
+	[ADkhA] [varchar](18) NULL,
+	[ADkiA] [varchar](40) NULL,
+	[AD45pA] [varchar](40) NULL,
+	[ADkjA] [varchar](18) NULL,
+	[ADfrA] [varchar](3) NULL,
+	[ADg1A] [varchar](3) NULL,
+	[ADfgA] [bigint] NULL,
+	[ADkkA] [varchar](10) NULL,
+	[ADklA] [varchar](10) NULL,
+	[ADkmA] [varchar](10) NULL,
+	[ADknA] [varchar](10) NULL,
+	[ADkoA] [int] NULL,
+	[ADkpA] [varchar](1) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_ADICD]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_ADICD](
+	[TSlg6xA] [int] NULL,
+	[TSlg6pA] [int] NULL,
+	[AD1aaA] [bigint] NULL,
+	[AD1a9A] [bigint] NULL,
+	[TSlg6yA] [varchar](1024) NULL,
+	[TSlg6vA] [int] NULL,
+	[AD5ydqvA] [datetime] NULL,
+	[AD5ydqwA] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_CX4CPT]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_CX4CPT](
+	[CX1j8A] [int] NULL,
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[CX2ibA] [bigint] NULL,
+	[CX1jrA] [varchar](10) NULL,
+	[CX2zlA] [varchar](15) NULL,
+	[CX2zmA] [varchar](64) NULL,
+	[UFgnA] [varchar](1) NULL,
+	[CX1k3A] [varchar](30) NULL,
+	[CX2znA] [datetime] NULL,
+	[CX2zoA] [datetime] NULL,
+	[CX20uA] [bigint] NULL,
+	[CX4w0A] [bigint] NULL,
+	[CX9aqA] [int] NULL,
+	[CX2fzA] [bigint] NULL,
+	[CX2z6A] [varchar](2) NULL,
+	[CXdrrA] [varchar](1) NULL,
+	[CXdrsA] [varchar](1) NULL,
+	[CXdrtA] [varchar](1) NULL,
+	[CXdruA] [varchar](1) NULL,
+	[CXdrvA] [varchar](1) NULL,
+	[CXb6kA] [varchar](1) NULL,
+	[CXb6lA] [varchar](10) NULL,
+	[CXb6mA] [datetime] NULL,
+	[CXb6nA] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABC]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABC](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ABCKEY] [int] NULL,
+	[ABCCDE] [varchar](15) NULL,
+	[ABCDESC] [varchar](64) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABE]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABE](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[ABEKEY] [int] NULL,
+	[ABECDE] [varchar](15) NULL,
+	[ABEDESC] [varchar](64) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABG]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABG](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ABGKEY] [int] NULL,
+	[ABGCDE] [varchar](15) NULL,
+	[ABGDESC] [varchar](64) NULL,
+	[ABGTOT] [varchar](1) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABR]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABR](
+	[COPKEY] [varchar](2) NULL,
+	[ABCKEY] [int] NULL,
+	[ABTKEY] [int] NULL,
+	[ABRROL] [varchar](6) NULL,
+	[ABRDESC] [varchar](50) NULL,
+	[ABRTYPE] [varchar](1) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABS]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABS](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ABCKEY] [int] NULL,
+	[ABSKEY] [int] NULL,
+	[ABSCDE] [varchar](15) NULL,
+	[ABSDESC] [varchar](64) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABT]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABT](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ABCKEY] [int] NULL,
+	[ABTKEY] [int] NULL,
+	[ABTCDE] [varchar](15) NULL,
+	[ABTDESC] [varchar](64) NULL,
+	[ABTUNIT] [varchar](1) NULL,
+	[ABTAUTH] [varchar](1) NULL,
+	[ABTCALTI] [varchar](1) NULL,
+	[ABTCALTE] [varchar](1) NULL,
+	[ABTTXTI] [varchar](1) NULL,
+	[ABTSTAT1] [varchar](15) NULL,
+	[ABTSTAT2] [varchar](15) NULL,
+	[ABTSTAT3] [varchar](15) NULL,
+	[ABTUNSAL] [varchar](1) NULL,
+	[ABTACT] [varchar](1) NULL,
+	[ABTCOE] [decimal](9, 4) NULL,
+	[ABTBALF] [varchar](1) NULL,
+	[ABTWP] [decimal](3, 1) NULL,
+	[HR51aA] [varchar](4) NULL,
+	[HR51xA] [int] NULL,
+	[HR51yA] [int] NULL,
+	[MASKEY] [bigint] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMABZ]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMABZ](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[ABZKEY] [int] NULL,
+	[ABZDATF] [datetime] NULL,
+	[HR5hoA] [varchar](1) NULL,
+	[ABZTIMF] [datetime] NULL,
+	[ABZDATT] [datetime] NULL,
+	[HR5hpA] [varchar](1) NULL,
+	[ABZTIMT] [datetime] NULL,
+	[ABZRAT] [decimal](9, 4) NULL,
+	[HRnjcn1A] [decimal](10, 4) NULL,
+	[HRnjcn2A] [decimal](10, 4) NULL,
+	[HRnjcn3A] [decimal](10, 4) NULL,
+	[ABZDAYI] [decimal](10, 4) NULL,
+	[ABZHRSI] [decimal](10, 4) NULL,
+	[ABZDAYIC] [decimal](10, 4) NULL,
+	[ABZRATI] [decimal](9, 4) NULL,
+	[ABZDAYE] [decimal](10, 4) NULL,
+	[ABZDAYEC] [decimal](10, 4) NULL,
+	[ABZRATE] [decimal](9, 4) NULL,
+	[ABZTXT] [varchar](64) NULL,
+	[ABZACT] [varchar](1) NULL,
+	[ABZPOST] [varchar](1) NULL,
+	[ABZQTY1] [decimal](11, 4) NULL,
+	[ABZQTY2] [decimal](11, 4) NULL,
+	[ABZLDLT] [varchar](1) NULL,
+	[ABZTECH] [varchar](1) NULL,
+	[ABZTAG] [decimal](10, 5) NULL,
+	[ABZSTD] [decimal](10, 5) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ABCKEY] [int] NULL,
+	[ABTKEY] [int] NULL,
+	[ABEKEY] [int] NULL,
+	[HRnjcn4A] [int] NULL,
+	[HRnjcn5A] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACC]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMACC](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[ACCKEY] [int] NULL,
+	[ACCCDE] [varchar](15) NULL,
+	[ACCDESC] [varchar](64) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACG]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMACG](
+	[COPKEY] [varchar](2) NULL,
+	[ACCKEY] [int] NULL,
+	[ABGKEY] [int] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[ACGSORT] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMACI]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMACI](
+	[ACIID] [varchar](40) NULL,
+	[ACIDESC] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAEA]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMAEA](
+	[EMPKEY] [bigint] NULL,
+	[ADTCODE] [varchar](3) NULL,
+	[PADMACON] [bigint] NULL,
+	[PADCORES] [bigint] NULL,
+	[EMCWACA] [varchar](1) NULL,
+	[ACEEMPN] [varchar](40) NULL,
+	[ACEEMPFN] [varchar](40) NULL,
+	[EMPNAM] [varchar](78) NULL,
+	[AECSALUT] [varchar](30) NULL,
+	[AECTITLE] [varchar](30) NULL,
+	[AECADRL1] [varchar](40) NULL,
+	[AECADRL2] [varchar](40) NULL,
+	[AECADRL3] [varchar](50) NULL,
+	[AECADRL4] [varchar](50) NULL,
+	[AECCOUE] [varchar](4) NULL,
+	[AECZIP] [varchar](11) NULL,
+	[AECCITY] [varchar](30) NULL,
+	[AECTEL] [varchar](30) NULL,
+	[AECFAX] [varchar](30) NULL,
+	[AECNATEL] [varchar](30) NULL,
+	[AECEMAIL] [varchar](50) NULL,
+	[AECSTRE] [varchar](40) NULL,
+	[AECHOMNA] [varchar](9) NULL,
+	[AECHOMNU] [varchar](8) NULL,
+	[AECCOISO] [varchar](2) NULL,
+	[AECCOUD] [varchar](30) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAGT]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMAGT](
+	[COPKEY] [varchar](2) NULL,
+	[ABGKEY] [int] NULL,
+	[ABCKEY] [int] NULL,
+	[ABTKEY] [int] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[AGTSIGN] [varchar](1) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAPC]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMAPC](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[APCKEY] [bigint] NULL,
+	[HRMAPC] [varchar](4) NULL,
+	[APCDESC] [varchar](40) NULL,
+	[HR1rkA] [bigint] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMASM]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMASM](
+	[ASMPART] [varchar](3) NULL,
+	[ASMSECT] [varchar](3) NULL,
+	[ASMGRP] [varchar](3) NULL,
+	[ASMSBGRP] [varchar](3) NULL,
+	[ASMTTXT] [varchar](30) NULL,
+	[APCKEYF] [bigint] NULL,
+	[APCKEYU] [bigint] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMASN]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMASN](
+	[ASNID] [int] NULL,
+	[ASNFROM] [datetime] NULL,
+	[ASNUNTIL] [datetime] NULL,
+	[ASNPCT] [decimal](9, 4) NULL,
+	[ASNHC] [decimal](11, 4) NULL,
+	[ASNMEMO] [varchar](1024) NULL,
+	[ASNSEQ] [int] NULL,
+	[OUNKEY] [int] NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[FUNKEY] [int] NULL,
+	[ASTID] [int] NULL,
+	[RAIID] [int] NULL,
+	[RALID] [int] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[ASNMAIN] [varchar](1) NULL,
+	[WGBKEY] [int] NULL,
+	[OUSCODE] [varchar](2) NULL,
+	[PRLKEY] [int] NULL,
+	[JODKEY] [int] NULL,
+	[idBelegungstyp] [int] NULL,
+	[Belegungstyp] [varchar](50) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMAST]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMAST](
+	[ASTID] [int] NULL,
+	[ASTDESCR] [varchar](64) NULL,
+	[ASTLEVEL] [int] NULL,
+	[ASTSTS] [varchar](1) NULL,
+	[ASTISVLD] [varchar](1) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMBRA]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMBRA](
+	[BRACODE] [varchar](15) NULL,
+	[BRADESC] [varchar](64) NULL,
+	[BRAFROM] [datetime] NULL,
+	[BRAUNTIL] [datetime] NULL,
+	[PADMACON] [bigint] NULL,
+	[PADCORES] [bigint] NULL,
+	[BRACOM] [int] NULL,
+	[BRACUDOC] [varchar](3) NULL,
+	[BRACUCOD] [varchar](3) NULL,
+	[BRAUID] [varchar](20) NULL,
+	[BRASUB] [varchar](1) NULL,
+	[BRASUBR] [decimal](9, 4) NULL,
+	[BRARES1] [varchar](1024) NULL,
+	[BRARES2] [varchar](1) NULL,
+	[BRARES3] [decimal](13, 2) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCAC]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMCAC](
+	[CACCODE] [varchar](5) NULL,
+	[CACDESC] [varchar](50) NULL,
+	[CACYEAR] [int] NULL,
+	[CACMONTH] [int] NULL,
+	[CACSERNO] [int] NULL,
+	[CACVALUT] [datetime] NULL,
+	[CACDATFR] [datetime] NULL,
+	[CACDATTI] [datetime] NULL,
+	[CACSTATU] [varchar](1) NULL,
+	[CACBKDAT] [datetime] NULL,
+	[CACDOCNR] [varchar](11) NULL,
+	[CACOWNER] [varchar](10) NULL,
+	[CACCACSD] [datetime] NULL,
+	[CACCACST] [datetime] NULL,
+	[CACCACED] [datetime] NULL,
+	[CACCACET] [datetime] NULL,
+	[CACREPSD] [datetime] NULL,
+	[CACREPST] [datetime] NULL,
+	[CACREPED] [datetime] NULL,
+	[CACREPET] [datetime] NULL,
+	[CACPMTSD] [datetime] NULL,
+	[CACPMTST] [datetime] NULL,
+	[CACPMTED] [datetime] NULL,
+	[CACPMTET] [datetime] NULL,
+	[CACBOKSD] [datetime] NULL,
+	[CACBOKST] [datetime] NULL,
+	[CACBOKED] [datetime] NULL,
+	[CACBOKET] [datetime] NULL,
+	[CACCNCSD] [datetime] NULL,
+	[CACCNCST] [datetime] NULL,
+	[CACCNCED] [datetime] NULL,
+	[CACCNCET] [datetime] NULL,
+	[CACRUNSQ] [int] NULL,
+	[FIPITMGR] [varchar](5) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[CACACCMT] [varchar](2) NULL,
+	[BCHID] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOH]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMCOH](
+	[USERCREA] [varchar](10) NULL,
+	[DATECREA] [datetime] NULL,
+	[TIMECREA] [datetime] NULL,
+	[USERMOD] [varchar](10) NULL,
+	[DATEMOD] [datetime] NULL,
+	[TIMEMOD] [datetime] NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[COHPERY] [int] NULL,
+	[COHPERM] [int] NULL,
+	[COHCONTY] [bigint] NULL,
+	[COHCOPCD] [varchar](2) NULL,
+	[COHPCACD] [bigint] NULL,
+	[COHCOUNT] [varchar](3) NULL,
+	[COHSTATE] [varchar](3) NULL,
+	[COHWTATF] [varchar](10) NULL,
+	[COHWHTSX] [varchar](1) NULL,
+	[COHWHTZP] [varchar](11) NULL,
+	[COHPFKEY] [bigint] NULL,
+	[COHPROFC] [bigint] NULL,
+	[COHASMCD] [bigint] NULL,
+	[COHFAMES] [bigint] NULL,
+	[COHMANPT] [bigint] NULL,
+	[COHCALCC] [varchar](5) NULL,
+	[UVGBS] [varchar](1) NULL,
+	[COHPARTT] [decimal](7, 4) NULL,
+	[COHPTICH] [varchar](1) NULL,
+	[COHPTCHG] [datetime] NULL,
+	[COHPARTP] [decimal](7, 4) NULL,
+	[COHPCXCU] [varchar](3) NULL,
+	[COHDTAXF] [varchar](3) NULL,
+	[COHTAXMU] [varchar](4) NULL,
+	[COHAMFM] [decimal](7, 2) NULL,
+	[COHAMFS] [decimal](7, 2) NULL,
+	[COHWTFPM] [decimal](7, 4) NULL,
+	[COHWTPFS] [decimal](7, 4) NULL,
+	[COHFRTIL] [datetime] NULL,
+	[COHDOEMP] [decimal](5, 2) NULL,
+	[COHSTATD] [decimal](5, 2) NULL,
+	[COHWORKD] [decimal](5, 2) NULL,
+	[COHHOLID] [decimal](5, 2) NULL,
+	[COHPOSLE] [varchar](5) NULL,
+	[COHPOSLY] [int] NULL,
+	[COHPOS] [varchar](5) NULL,
+	[COHPOSY] [int] NULL,
+	[COHAGE] [varchar](5) NULL,
+	[COHAGEY] [int] NULL,
+	[COHCHIEP] [int] NULL,
+	[COHPAYAL] [varchar](1) NULL,
+	[COHSTRNA] [varchar](15) NULL,
+	[COHSTRNB] [varchar](15) NULL,
+	[COHSTRNC] [varchar](15) NULL,
+	[CONSTRND] [varchar](15) NULL,
+	[COHSTRNE] [varchar](15) NULL,
+	[COHCOSTC] [bigint] NULL,
+	[COHEMPPC] [decimal](9, 4) NULL,
+	[COHCHBCA] [varchar](1) NULL,
+	[COHCHSTA] [varchar](3) NULL,
+	[COHCHCOU] [varchar](3) NULL,
+	[COHFICO] [int] NULL,
+	[COHCHCOM] [datetime] NULL,
+	[FIPCDE] [varchar](5) NULL,
+	[COMPANY] [int] NULL,
+	[SSEKEY] [bigint] NULL,
+	[UVIID] [int] NULL,
+	[BRACODE] [varchar](15) NULL,
+	[COHTAXNO] [varchar](25) NULL,
+	[Periode] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOM]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMCOM](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[COMPANY] [int] NULL,
+	[COMDESC] [varchar](40) NULL,
+	[COMTXTSA] [varchar](30) NULL,
+	[COMEMPNR] [varchar](10) NULL,
+	[COMDTAID] [varchar](5) NULL,
+	[COMDTCAR] [varchar](1) NULL,
+	[COMUNIT] [varchar](10) NULL,
+	[COMDENS] [varchar](10) NULL,
+	[COMSALRU] [int] NULL,
+	[COMFICON] [varchar](1) NULL,
+	[COMEMPNO] [varchar](25) NULL,
+	[COMAID] [varchar](1) NULL,
+	[COMACCLD] [varchar](1) NULL,
+	[COMAPPSM] [int] NULL,
+	[COMCSTSQ] [varchar](1) NULL,
+	[COMW2EY] [varchar](1) NULL,
+	[COMW2FT] [varchar](1) NULL,
+	[COMPRTPR] [varchar](1) NULL,
+	[COMCALPP] [varchar](1) NULL,
+	[COMMULSS] [varchar](1) NULL,
+	[COMPORG] [varchar](1) NULL,
+	[COMOER] [varchar](1) NULL,
+	[CONGENED] [int] NULL,
+	[COMSRTW2] [varchar](1) NULL,
+	[COMSTA] [varchar](15) NULL,
+	[COMSTB] [varchar](15) NULL,
+	[COMSTC] [varchar](15) NULL,
+	[COMSTD] [varchar](15) NULL,
+	[COMSTE] [varchar](15) NULL,
+	[COMLVLA] [varchar](15) NULL,
+	[COMLVLB] [varchar](15) NULL,
+	[COMLVLC] [varchar](15) NULL,
+	[COMLVLD] [varchar](15) NULL,
+	[COMLVLE] [varchar](64) NULL,
+	[COMCLOF] [varchar](1) NULL,
+	[COMTRMTD] [varchar](1) NULL,
+	[COMACVCD] [varchar](1) NULL,
+	[COMACVDM] [int] NULL,
+	[COMADPAY] [varchar](1) NULL,
+	[COMASINT] [varchar](1) NULL,
+	[COMDTAC] [varchar](5) NULL,
+	[COMDTAPB] [varchar](1) NULL,
+	[COMPAYAD] [varchar](1) NULL,
+	[COMW2CN] [varchar](1) NULL,
+	[UFf7A] [varchar](2) NULL,
+	[COMDTA1] [varchar](30) NULL,
+	[COMDTA2] [varchar](30) NULL,
+	[COMDTA3] [varchar](30) NULL,
+	[COMDTA4] [varchar](30) NULL,
+	[COMFIBUC] [varchar](1) NULL,
+	[COMOWNNM] [varchar](40) NULL,
+	[COMOWNFN] [varchar](40) NULL,
+	[COMUID] [varchar](20) NULL,
+	[COMSADK] [int] NULL,
+	[HRuqA] [bigint] NULL,
+	[COMSSAID] [bigint] NULL,
+	[COMCOPAT] [varchar](2) NULL,
+	[COMFIPAT] [varchar](5) NULL,
+	[UVGBS] [varchar](1) NULL,
+	[BURNR] [varchar](20) NULL,
+	[UVIID] [int] NULL,
+	[COMUVGID] [int] NULL,
+	[COMBVGID] [int] NULL,
+	[COMKTGID] [int] NULL,
+	[COMUVZID] [int] NULL,
+	[idUnternehmen] [int] NULL,
+	[Unternehmen] [varchar](50) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCON]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMCON](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[CONSTAT] [varchar](1) NULL,
+	[CONNAFI] [varchar](78) NULL,
+	[CONSTEL] [varchar](1) NULL,
+	[CONACCST] [varchar](1) NULL,
+	[CONPAYRO] [int] NULL,
+	[CONSALFR] [datetime] NULL,
+	[CONRECUN] [datetime] NULL,
+	[CONACTY] [int] NULL,
+	[CONACTM] [int] NULL,
+	[COMPANY] [int] NULL,
+	[CONCALCC] [varchar](5) NULL,
+	[CONSINST] [varchar](40) NULL,
+	[CONPAYCH] [varchar](1) NULL,
+	[CONCONCH] [varchar](1) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMCOT]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMCOT](
+	[DATECREA] [datetime] NULL,
+	[TIMECREA] [datetime] NULL,
+	[USERCREA] [varchar](10) NULL,
+	[DATEMOD] [datetime] NULL,
+	[TIMEMOD] [datetime] NULL,
+	[USERMOD] [varchar](10) NULL,
+	[COTKEY] [bigint] NULL,
+	[COTCODE] [varchar](10) NULL,
+	[COTLDESC] [varchar](30) NULL,
+	[COTSDESC] [varchar](15) NULL,
+	[COTESHOY] [decimal](7, 2) NULL,
+	[COTESHOM] [decimal](5, 2) NULL,
+	[COTESHOW] [decimal](5, 2) NULL,
+	[COTESHOD] [decimal](5, 2) NULL,
+	[COTSALFA] [int] NULL,
+	[idVertragsart] [int] NULL,
+	[Vertragsart] [varchar](50) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMELH]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMELH](
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[ELHENTPY] [int] NULL,
+	[ELHENTPM] [int] NULL,
+	[ELHENTD] [datetime] NULL,
+	[ELHENTD2] [datetime] NULL,
+	[ELHLEAPY] [int] NULL,
+	[ELHLEAPM] [int] NULL,
+	[ELHLEAD] [datetime] NULL,
+	[ELHLEAD2] [datetime] NULL,
+	[ELHTHED] [datetime] NULL,
+	[ELHPFED] [datetime] NULL,
+	[ELHPFULD] [datetime] NULL,
+	[ELHREM] [varchar](78) NULL,
+	[ELHENTMO] [bigint] NULL,
+	[ELHLEAMO] [bigint] NULL,
+	[ELHQUITD] [datetime] NULL,
+	[ELHPROBD] [datetime] NULL,
+	[ELHREM2] [varchar](78) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[PeriodeVon] [int] NULL,
+	[PeriodeBis] [int] NULL,
+	[JahrBis] [int] NULL,
+	[MonatBis] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEMC]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMEMC](
+	[EMPKEY] [bigint] NULL,
+	[ADTCODE] [varchar](3) NULL,
+	[PADMACON] [bigint] NULL,
+	[EMCWACA] [varchar](1) NULL,
+	[PADCORES] [bigint] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMEMP]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMEMP](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[EMPKEY] [bigint] NULL,
+	[EMPNUM] [varchar](10) NULL,
+	[EMPNAME] [varchar](40) NULL,
+	[EMPFNAME] [varchar](40) NULL,
+	[EMPNFN] [varchar](78) NULL,
+	[EMPSEX] [varchar](1) NULL,
+	[EMPLANG] [varchar](2) NULL,
+	[EMPBORN] [datetime] NULL,
+	[EMPDECEA] [datetime] NULL,
+	[EMPPRSTP] [varchar](1) NULL,
+	[idGeschlecht] [int] NULL,
+	[Geschlecht] [varchar](1) NULL,
+	[GeschlechtBez] [varchar](20) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMENM]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMENM](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[ENMKEY] [bigint] NULL,
+	[ENMCODE] [varchar](15) NULL,
+	[ENMLDESC] [varchar](30) NULL,
+	[ENMSDESC] [varchar](15) NULL,
+	[ENMRSTS] [varchar](1) NULL,
+	[idEintrittsgrund] [int] NULL,
+	[Eintrittsgrund] [varchar](100) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMFES]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMFES](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[FESKEY] [bigint] NULL,
+	[FESCODE] [varchar](10) NULL,
+	[FESDESC] [varchar](25) NULL,
+	[FESDEDU] [decimal](7, 4) NULL,
+	[FESCOMM] [decimal](7, 4) NULL,
+	[FESCUSNO] [varchar](32) NULL,
+	[FESSUBNO] [varchar](2) NULL,
+	[COUKEY] [varchar](3) NULL,
+	[STATE] [varchar](3) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMFIP]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMFIP](
+	[COPKEY] [varchar](2) NULL,
+	[FIPCDE] [varchar](5) NULL,
+	[FIPDESC] [varchar](30) NULL,
+	[FIPFICOM] [int] NULL,
+	[FIPFCOMD] [varchar](40) NULL,
+	[FIPFINYR] [int] NULL,
+	[FIPITMGR] [varchar](5) NULL,
+	[FIPFIPCD] [varchar](5) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+CREATE TABLE [dbo].[lp_t_stage_HRMFUN](
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[FUNKEY] [int] NULL,
+	[FUNCODE] [varchar](15) NULL,
+	[FUNDESC] [varchar](120) NULL,
+	[FUNVALUE] [int] NULL,
+	[FUNISVLD] [varchar](1) NULL,
+	[FUNSALFR] [decimal](11, 2) NULL,
+	[FUNSALTI] [decimal](11, 2) NULL,
+	[WGBKEY] [int] NULL,
+	[idFunktion] [int] NULL,
+	[Funktion] [varchar](120) NULL,
+	[Gruppe1] [varchar](50) NULL,
+	[Gruppe2] [varchar](50) NULL,
+	[Gruppe3] [varchar](50) NULL
+) ON [PRIMARY]
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMICD]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMICD](
+	[ICDID] [int] NULL,
+	[IDIVALUE] [varchar](1024) NULL,
+	[IDIDATFR] [datetime] NULL,
+	[IDIDATETO] [datetime] NULL,
+	[IDFID] [int] NULL,
+	[IDEID] [int] NULL,
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMIDE]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMIDE](
+	[IDEID] [int] NULL,
+	[IDETEXT] [varchar](255) NULL,
+	[IDTID] [int] NULL,
+	[IDESHOD] [varchar](20) NULL,
+	[IDEGROUP] [varchar](20) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMLEM]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMLEM](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[LEMKEY] [bigint] NULL,
+	[LEMCODE] [varchar](15) NULL,
+	[LEMLDESC] [varchar](30) NULL,
+	[LEMSDESC] [varchar](15) NULL,
+	[LEMRSTS] [varchar](1) NULL,
+	[idAustrittsgrund] [int] NULL,
+	[Austrittsgrund] [varchar](100) NULL,
+	[Gruppe1] [varchar](50) NULL,
+	[Netto] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMORG]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMORG](
+	[ORGID] [int] NULL,
+	[ORGPNTOU] [int] NULL,
+	[ORGCHDOU] [int] NULL,
+	[ORGFROM] [datetime] NULL,
+	[ORGUNTIL] [datetime] NULL,
+	[ORSID] [int] NULL,
+	[ORGCHSEQ] [int] NULL,
+	[ORGSTAFF] [varchar](1) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMOUN]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMOUN](
+	[OUNPKEY] [int] NULL,
+	[OUNKEY] [int] NULL,
+	[OUNCODE] [varchar](15) NULL,
+	[OUNDESC] [varchar](64) NULL,
+	[OUNFROM] [datetime] NULL,
+	[OUNUNTIL] [datetime] NULL,
+	[OUNPCT] [decimal](9, 4) NULL,
+	[OUNHC] [decimal](11, 4) NULL,
+	[OUNTYPE] [varchar](1) NULL,
+	[OUNADDR1] [varchar](64) NULL,
+	[OUNADDR2] [varchar](64) NULL,
+	[OUNADDR3] [varchar](64) NULL,
+	[OUNADDR4] [varchar](64) NULL,
+	[OUNMEMO] [varchar](1024) NULL,
+	[COMPANY] [int] NULL,
+	[FUNKEY] [int] NULL,
+	[RAIID] [int] NULL,
+	[RALID] [int] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[WGBKEY] [int] NULL,
+	[OLVCODE] [varchar](2) NULL,
+	[OUNINBUD] [varchar](1) NULL,
+	[OUNBPCT] [decimal](9, 4) NULL,
+	[OUNMACON] [bigint] NULL,
+	[OUNCORNR] [bigint] NULL,
+	[PCXCSTCN] [bigint] NULL,
+	[OUNPCT2] [decimal](9, 4) NULL,
+	[OUNCODE1] [varchar](20) NULL,
+	[OUNCODE2] [varchar](20) NULL,
+	[OUNCODE3] [varchar](20) NULL,
+	[OUNCODE4] [varchar](20) NULL,
+	[OUNCODE5] [varchar](20) NULL,
+	[OUNCODE6] [varchar](20) NULL,
+	[OUNCODE7] [varchar](20) NULL,
+	[OUNCODE8] [varchar](20) NULL,
+	[OUNCODE9] [varchar](20) NULL,
+	[OUNCOD10] [varchar](20) NULL,
+	[OUNSHOD] [varchar](20) NULL,
+	[SUBKEY] [int] NULL,
+	[OUNSECIN] [varchar](40) NULL,
+	[OUTTBID] [varchar](1) NULL,
+	[OUTCODE] [varchar](10) NULL,
+	[OUTTBID2] [varchar](1) NULL,
+	[OUTCODE2] [varchar](10) NULL,
+	[OUTTBID3] [varchar](1) NULL,
+	[OUTCODE3] [varchar](10) NULL,
+	[OUTTBID4] [varchar](1) NULL,
+	[OUTCODE4] [varchar](10) NULL,
+	[OUTTBID5] [varchar](1) NULL,
+	[OUTCODE5] [varchar](10) NULL,
+	[OUSCODE] [varchar](2) NULL,
+	[PRLKEY] [int] NULL,
+	[JODKEY] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPAY]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMPAY](
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[SATKEY] [varchar](4) NULL,
+	[SALYEAR] [int] NULL,
+	[SALMONTH] [int] NULL,
+	[SALLINE] [int] NULL,
+	[PAYCACNR] [int] NULL,
+	[PAYQUANT] [decimal](11, 4) NULL,
+	[PAYRATE] [decimal](9, 4) NULL,
+	[PAYAMT] [decimal](11, 2) NULL,
+	[PAYPCT] [decimal](9, 4) NULL,
+	[PAYBASE] [decimal](11, 2) NULL,
+	[PAYTEXT] [varchar](64) NULL,
+	[PAYLNGID] [varchar](2) NULL,
+	[PAYSHOW] [varchar](1) NULL,
+	[PAYPRTGR] [varchar](3) NULL,
+	[PAYPRTSQ] [int] NULL,
+	[PAYMENTY] [varchar](1) NULL,
+	[PAYDATE] [datetime] NULL,
+	[PAYTIME] [datetime] NULL,
+	[PAYUSER] [varchar](10) NULL,
+	[PAYFICO] [int] NULL,
+	[COMPANY] [int] NULL,
+	[PAYRYEAR] [int] NULL,
+	[PAYRMTH] [int] NULL,
+	[Periode] [int] NULL,
+	[DatumVon] [datetime] NULL,
+	[DatumBis] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPCA]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMPCA](
+	[DATECREA] [datetime] NULL,
+	[TIMECREA] [datetime] NULL,
+	[USERCREA] [varchar](10) NULL,
+	[DATEMOD] [datetime] NULL,
+	[TIMEMOD] [datetime] NULL,
+	[USERMOD] [varchar](10) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[PCAKEY] [bigint] NULL,
+	[PCACODE] [varchar](15) NULL,
+	[PCALDESC] [varchar](30) NULL,
+	[PCASDESC] [varchar](15) NULL,
+	[PCASAT] [varchar](4) NULL,
+	[HR1p4A] [varchar](5) NULL,
+	[PCAUVGDE] [varchar](1) NULL,
+	[PCAUVGSU] [varchar](1) NULL,
+	[idPersonalkategorie] [int] NULL,
+	[Personalkategorie] [varchar](50) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPGR]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMPGR](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[PGRKEY] [bigint] NULL,
+	[PGRCODE] [varchar](3) NULL,
+	[PGRLDESC] [varchar](30) NULL,
+	[PGRSDESC] [varchar](15) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMPRO]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMPRO](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[PROKEY] [bigint] NULL,
+	[PROCODE] [varchar](8) NULL,
+	[PRODESC] [varchar](30) NULL,
+	[PROLVL] [int] NULL,
+	[PROADD] [varchar](64) NULL,
+	[POGKEY] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMRAI]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMRAI](
+	[RAIID] [int] NULL,
+	[RAICODE] [varchar](10) NULL,
+	[RAIDESCR] [varchar](64) NULL,
+	[BFSPOSIT] [int] NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[idRang] [int] NULL,
+	[Rang] [varchar](100) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMRAL]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMRAL](
+	[RALID] [int] NULL,
+	[RALCODE] [varchar](10) NULL,
+	[RALDESCR] [varchar](64) NULL,
+	[RALSHOD] [varchar](15) NULL,
+	[RALGROUP] [varchar](15) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[idORRang] [int] NULL,
+	[ORRang] [varchar](50) NULL,
+	[Gruppe1] [varchar](50) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSAL]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMSAL](
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[SATKEY] [varchar](4) NULL,
+	[SALYEAR] [int] NULL,
+	[SALMONTH] [int] NULL,
+	[SALLINE] [int] NULL,
+	[SALPLAN] [varchar](1) NULL,
+	[SALVALUY] [int] NULL,
+	[SALVALUM] [int] NULL,
+	[SALQUANT] [decimal](11, 4) NULL,
+	[SALRATE] [decimal](9, 4) NULL,
+	[SALAMOUN] [decimal](11, 2) NULL,
+	[SALPRATE] [decimal](9, 4) NULL,
+	[SALDATEF] [datetime] NULL,
+	[SALDATET] [datetime] NULL,
+	[SALTEXT] [varchar](64) NULL,
+	[SALMARGU] [varchar](10) NULL,
+	[SALRECDT] [datetime] NULL,
+	[SALRECNU] [varchar](11) NULL,
+	[SALIMPRU] [int] NULL,
+	[SALCHECK] [varchar](1) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[PCXACCS] [varchar](15) NULL,
+	[PCXCSTCS] [bigint] NULL,
+	[SALBKCCS] [varchar](1) NULL,
+	[PCXACCH] [varchar](15) NULL,
+	[PCXCSTCH] [bigint] NULL,
+	[SALBKCCH] [varchar](1) NULL,
+	[PCXCSTTY] [bigint] NULL,
+	[SALOPRTN] [varchar](20) NULL,
+	[PCXMCSTU] [bigint] NULL,
+	[PCXCSTU] [bigint] NULL,
+	[COMPANY] [int] NULL,
+	[PCXVATSU] [bigint] NULL,
+	[PCXVATNO] [varchar](14) NULL,
+	[RCICYEAR] [int] NULL,
+	[RCICMNTH] [int] NULL,
+	[RCIID] [int] NULL,
+	[SALVATTY] [varchar](2) NULL,
+	[SALVATNA] [varchar](30) NULL,
+	[PeriodeVon] [int] NULL,
+	[PeriodeBis] [int] NULL,
+	[idPlanlohn] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSAT]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMSAT](
+	[USERCREA] [varchar](10) NULL,
+	[DATECREA] [datetime] NULL,
+	[TIMECREA] [datetime] NULL,
+	[USERMOD] [varchar](10) NULL,
+	[DATEMOD] [datetime] NULL,
+	[TIMEMOD] [datetime] NULL,
+	[COPKEY] [varchar](2) NULL,
+	[SATKEY] [varchar](4) NULL,
+	[SATDESC] [varchar](64) NULL,
+	[SATCALS] [int] NULL,
+	[SATRNDCD] [varchar](1) NULL,
+	[SATRNDM] [varchar](1) NULL,
+	[SATPGRP] [bigint] NULL,
+	[SATPSN] [int] NULL,
+	[SATFXDRT] [decimal](9, 4) NULL,
+	[SATFCT] [varchar](10) NULL,
+	[SATFTC] [varchar](1) NULL,
+	[SATFOC] [varchar](1) NULL,
+	[SATPRF] [decimal](9, 4) NULL,
+	[SATPTP] [varchar](1) NULL,
+	[SATPTT] [varchar](1) NULL,
+	[SATQTYF] [decimal](11, 4) NULL,
+	[SATAMTF] [decimal](11, 2) NULL,
+	[SATACD] [varchar](1) NULL,
+	[SATADJE] [varchar](1) NULL,
+	[SATAPK1] [int] NULL,
+	[SATAPK2] [int] NULL,
+	[SATACTL] [varchar](1) NULL,
+	[SATDPS] [varchar](1) NULL,
+	[SATRVS] [varchar](1) NULL,
+	[SATPRTA] [varchar](1) NULL,
+	[SATCONV] [varchar](1) NULL,
+	[SATTRSF] [varchar](1) NULL,
+	[SATBSAL] [varchar](1) NULL,
+	[SATRPV] [varchar](1) NULL,
+	[SATRATC] [varchar](1) NULL,
+	[SATSNGI] [varchar](1) NULL,
+	[SATCDQ] [varchar](1) NULL,
+	[SATCDR] [varchar](1) NULL,
+	[SATCDA] [varchar](1) NULL,
+	[SATCDP] [varchar](1) NULL,
+	[SATCDB] [varchar](1) NULL,
+	[SATMANI] [varchar](1) NULL,
+	[SATCFO] [varchar](4) NULL,
+	[SATMAS] [bigint] NULL,
+	[SATRTSAT] [varchar](4) NULL,
+	[SATLOJAN] [varchar](1) NULL,
+	[SATLOFEB] [varchar](1) NULL,
+	[SATLOMAR] [varchar](1) NULL,
+	[SATLOAPR] [varchar](1) NULL,
+	[SATLOMAY] [varchar](1) NULL,
+	[SATLOJUN] [varchar](1) NULL,
+	[SATLOJUL] [varchar](1) NULL,
+	[SATLOAUG] [varchar](1) NULL,
+	[SATLOSEP] [varchar](1) NULL,
+	[SATLOOCT] [varchar](1) NULL,
+	[SATLONOV] [varchar](1) NULL,
+	[SATLODEC] [varchar](1) NULL,
+	[SATSDESC] [varchar](15) NULL,
+	[SATRCTYP] [int] NULL,
+	[SATIGRCT] [int] NULL,
+	[SATRCAMT] [int] NULL,
+	[SATRCPCT] [int] NULL,
+	[SATRCQTY] [int] NULL,
+	[SATRCRAT] [int] NULL,
+	[SATBFSRL] [varchar](3) NULL,
+	[SATBFSRS] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMSSE]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMSSE](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[SSEKEY] [bigint] NULL,
+	[SSECODE] [varchar](10) NULL,
+	[SSEDESC] [varchar](30) NULL,
+	[SSEACNUM] [varchar](64) NULL,
+	[SSESERIE] [varchar](2) NULL,
+	[SSEYEAR] [int] NULL,
+	[SSEDATE] [datetime] NULL,
+	[SSEIKLIS] [varchar](1) NULL,
+	[SSEMNAME] [varchar](50) NULL,
+	[SSECMPDE] [varchar](50) NULL,
+	[SSEPLBUS] [varchar](25) NULL,
+	[SSEEMP1] [varchar](40) NULL,
+	[SSEEMP2] [varchar](40) NULL,
+	[SSESUBNO] [varchar](2) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMUVG]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMUVG](
+	[USzA] [datetime] NULL,
+	[US10A] [datetime] NULL,
+	[US11A] [varchar](10) NULL,
+	[US12A] [datetime] NULL,
+	[US13A] [datetime] NULL,
+	[US14A] [varchar](10) NULL,
+	[UVGBS] [varchar](1) NULL,
+	[UVGDESC] [varchar](30) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMUVI]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMUVI](
+	[UVIID] [int] NULL,
+	[UVINAME] [varchar](64) NULL,
+	[UVICUSNO] [varchar](64) NULL,
+	[UVISUBNO] [varchar](2) NULL,
+	[UVISUVA] [varchar](1) NULL,
+	[UVIBKACT] [varchar](64) NULL,
+	[UVIBKADR] [varchar](255) NULL,
+	[UVIINSNR] [varchar](20) NULL,
+	[UVICONNR] [varchar](20) NULL,
+	[UVIMACO] [bigint] NULL,
+	[UVICORE] [bigint] NULL,
+	[UVIBRKNR] [varchar](20) NULL,
+	[UVIBMACO] [bigint] NULL,
+	[UVIBCORE] [bigint] NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_stage_HRMWGB]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_stage_HRMWGB](
+	[WGBPKEY] [int] NULL,
+	[WGBKEY] [int] NULL,
+	[WGBVALFR] [datetime] NULL,
+	[WGBVALUN] [datetime] NULL,
+	[WGBCODE] [varchar](15) NULL,
+	[WGBDESC] [varchar](64) NULL,
+	[WGBVALUE] [int] NULL,
+	[WGBSALFR] [decimal](11, 2) NULL,
+	[WGBSALTI] [decimal](11, 2) NULL,
+	[WGBSALAV] [decimal](11, 2) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[WGBAGEF] [int] NULL,
+	[WGBAGET] [int] NULL,
+	[WGBBNDP] [varchar](3) NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_LohnPerioden]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_tmp_LohnPerioden](
+	[Periode] [int] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_Organisation]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_tmp_Organisation](
+	[OE1] [varchar](100) NULL,
+	[OE2] [varchar](100) NULL,
+	[OE3] [varchar](100) NULL,
+	[OE4] [varchar](100) NULL,
+	[OE5] [varchar](100) NULL,
+	[OE6] [varchar](100) NULL,
+	[OE7] [varchar](100) NULL,
+	[OE8] [varchar](100) NULL,
+	[OE9] [varchar](100) NULL,
+	[OE10] [varchar](100) NULL,
+	[OE11] [varchar](100) NULL,
+	[OE12] [varchar](100) NULL,
+	[OE13] [varchar](100) NULL,
+	[OE14] [varchar](100) NULL,
+	[Ebene1] [varchar](100) NULL,
+	[Ebene2] [varchar](100) NULL,
+	[Ebene3] [varchar](100) NULL,
+	[Ebene4] [varchar](100) NULL,
+	[Ebene5] [varchar](100) NULL,
+	[Ebene6] [varchar](100) NULL,
+	[Ebene7] [varchar](100) NULL,
+	[Ebene8] [varchar](100) NULL,
+	[Ebene9] [varchar](100) NULL,
+	[Ebene10] [varchar](100) NULL,
+	[Ebene11] [varchar](100) NULL,
+	[Ebene12] [varchar](100) NULL,
+	[Ebene13] [varchar](100) NULL,
+	[Ebene14] [varchar](100) NULL,
+	[Typ1] [varchar](100) NULL,
+	[Typ2] [varchar](100) NULL,
+	[Typ3] [varchar](100) NULL,
+	[Typ4] [varchar](100) NULL,
+	[Typ5] [varchar](100) NULL,
+	[Typ6] [varchar](100) NULL,
+	[Typ7] [varchar](100) NULL,
+	[Typ8] [varchar](100) NULL,
+	[Typ9] [varchar](100) NULL,
+	[Typ10] [varchar](100) NULL,
+	[Typ11] [varchar](100) NULL,
+	[Typ12] [varchar](100) NULL,
+	[Typ13] [varchar](100) NULL,
+	[Typ14] [varchar](100) NULL,
+	[OEBezeichnung] [varchar](64) NULL,
+	[idOE] [int] NOT NULL,
+	[Stichtag] [datetime] NOT NULL,
+	[OEEbene1] [varchar](64) NULL,
+	[OEEbene2] [varchar](64) NULL,
+	[OEEbene3] [varchar](64) NULL,
+	[OEEbene4] [varchar](64) NULL,
+	[OEEbene5] [varchar](64) NULL,
+	[OEEbene6] [varchar](64) NULL,
+	[OEEbene7] [varchar](64) NULL,
+	[OEEbene8] [varchar](64) NULL,
+	[OEEbene9] [varchar](64) NULL,
+	[OEEbene10] [varchar](64) NULL,
+	[OEEbene11] [varchar](64) NULL,
+	[OEEbene12] [varchar](64) NULL,
+	[OEEbene13] [varchar](64) NULL,
+	[OEEbene14] [varchar](64) NULL,
+	[OE1Var2] [nvarchar](100) NULL,
+	[OE2Var2] [nvarchar](100) NULL,
+	[OE3Var2] [nvarchar](100) NULL,
+	[OE4Var2] [nvarchar](100) NULL,
+	[OE5Var2] [nvarchar](100) NULL,
+	[OE6Var2] [nvarchar](100) NULL,
+	[OE7Var2] [nvarchar](100) NULL,
+	[OE8Var2] [nvarchar](100) NULL,
+	[OE9Var2] [nvarchar](100) NULL,
+	[OE10Var2] [nvarchar](100) NULL,
+	[OE11Var2] [nvarchar](100) NULL,
+	[OE12Var2] [nvarchar](100) NULL,
+	[OE13Var2] [nvarchar](100) NULL,
+	[OE14Var2] [nvarchar](100) NULL,
+ CONSTRAINT [PK_lp_t_tmp_Organisation] PRIMARY KEY CLUSTERED 
+(
+	[idOE] ASC,
+	[Stichtag] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_OrgStichtag]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_tmp_OrgStichtag](
+	[Datum] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[lp_t_tmp_Planlohn]&apos;) AND type in (N&apos;U&apos;))
+BEGIN
+CREATE TABLE [dbo].[lp_t_tmp_Planlohn](
+	[EMPKEY] [bigint] NULL,
+	[CONNUMB] [varchar](1) NULL,
+	[COPKEY] [varchar](2) NULL,
+	[SATKEY] [varchar](4) NULL,
+	[SALYEAR] [int] NULL,
+	[SALMONTH] [int] NULL,
+	[SALLINE] [int] NULL,
+	[SALPLAN] [varchar](1) NULL,
+	[SALVALUY] [int] NULL,
+	[SALVALUM] [int] NULL,
+	[SALQUANT] [decimal](11, 4) NULL,
+	[SALRATE] [decimal](9, 4) NULL,
+	[SALAMOUN] [decimal](11, 2) NULL,
+	[SALPRATE] [decimal](9, 4) NULL,
+	[SALDATEF] [datetime] NULL,
+	[SALDATET] [datetime] NULL,
+	[SALTEXT] [varchar](64) NULL,
+	[SALMARGU] [varchar](10) NULL,
+	[SALRECDT] [datetime] NULL,
+	[SALRECNU] [varchar](11) NULL,
+	[SALIMPRU] [int] NULL,
+	[SALCHECK] [varchar](1) NULL,
+	[TSCUSR] [varchar](10) NULL,
+	[TSCDAT] [datetime] NULL,
+	[TSCTIM] [datetime] NULL,
+	[TSMUSR] [varchar](10) NULL,
+	[TSMDAT] [datetime] NULL,
+	[TSMTIM] [datetime] NULL,
+	[PCXACCS] [varchar](15) NULL,
+	[PCXCSTCS] [bigint] NULL,
+	[SALBKCCS] [varchar](1) NULL,
+	[PCXACCH] [varchar](15) NULL,
+	[PCXCSTCH] [bigint] NULL,
+	[SALBKCCH] [varchar](1) NULL,
+	[PCXCSTTY] [bigint] NULL,
+	[SALOPRTN] [varchar](20) NULL,
+	[PCXMCSTU] [bigint] NULL,
+	[PCXCSTU] [bigint] NULL,
+	[COMPANY] [int] NULL,
+	[PCXVATSU] [bigint] NULL,
+	[PCXVATNO] [varchar](14) NULL,
+	[RCICYEAR] [int] NULL,
+	[RCICMNTH] [int] NULL,
+	[RCIID] [int] NULL,
+	[SALVATTY] [varchar](2) NULL,
+	[SALVATNA] [varchar](30) NULL,
+	[idPlanlohn] [int] NULL,
+	[PeriodeVon] [int] NULL,
+	[PeriodeBis] [int] NULL,
+	[Periode] [int] NULL,
+	[Stichtag] [datetime] NULL
+) ON [PRIMARY]
+END
+;
+SET ANSI_PADDING OFF
+
+
+
+CREATE TABLE lp_t_stage_HRMSEM
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, SEMKEY INT
+, SEMNUMB VARCHAR(15)
+, SEMDESC1 VARCHAR(64)
+, SEMDESC2 VARCHAR(64)
+, SEMSTATUS VARCHAR(1)
+, SEMSECI VARCHAR(40)
+, EDDKEY INT
+, SEMTYPE VARCHAR(1)
+)
+;
+
+
+
+
+CREATE TABLE lp_t_stage_HRMEVT
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EVGKEY INT
+, EVTKEY INT
+, EVTNBR VARCHAR(15)
+, EVTYEAR INT
+, EVTMAN BIGINT
+, EVTMANC BIGINT
+, EVTTEACH INT
+, EVTDAYS DECIMAL(5,2)
+, EVTEOR DATETIME
+, EVTBEGIN DATETIME
+, EVTEND DATETIME
+, EVTMINP INT
+, EVTMAXP INT
+, EVTOCC VARCHAR(1)
+, EVTLCK VARCHAR(1)
+, EVTSTS VARCHAR(1)
+, EVTWSTS VARCHAR(1)
+, EVTLNG VARCHAR(2)
+, RETKEY INT
+, RESKEY INT
+)
+;
+
+
+
+CREATE TABLE lp_t_stage_HRMEGT
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, ETYKEY INT
+, EVGKEY INT
+, SEMKEY INT
+)
+;
+
+
+
+CREATE TABLE lp_t_stage_HRMREG
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EVGKEY INT
+, EVTKEY INT
+, REGKEY INT
+, REGSTAT VARCHAR(1)
+, RUSKEY INT
+, REGWLPOS INT
+, REGMASCO BIGINT
+, REGCORR BIGINT
+, REGEMPN VARCHAR(78)
+, REGDREG DATETIME
+, REGDOUT DATETIME
+, BUIKEY INT
+, REGDARR DATETIME
+, REGDDEP DATETIME
+, REGHSTS VARCHAR(1)
+, REGNREG INT
+, REGAT VARCHAR(1)
+, REGFIBUC INT
+, REGCC BIGINT
+, REGPRCTY BIGINT
+, REGPRCCU VARCHAR(3)
+, REGPRCDA DATETIME
+, REGREM VARCHAR(256)
+, SEMKEY INT
+, ECOKEY INT
+, REGCOMDAT DATETIME
+, REGTYPE VARCHAR(1)
+, REGTYPER VARCHAR(1)
+, REGGRP INT
+, REGIRC VARCHAR(1)
+, REGDRC VARCHAR(1)
+, RPRKEY INT
+, REGEXPD DATETIME
+, REGCOND DATETIME
+, REGINVD DATETIME
+, REGUADM VARCHAR(10)
+, REGRES1 VARCHAR(1)
+)
+;
+
+
+
+CREATE TABLE lp_t_stage_HRMMOD
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, MODKEY INT
+, MODNBR VARCHAR(15)
+, MODDESC VARCHAR(64)
+, MODSTRD DATETIME
+, MODSTRT DATETIME
+, MODENDD DATETIME
+, MODENDT DATETIME
+, MODDURD DECIMAL(5,2)
+, MODDURH DECIMAL(5,2)
+, MODSTATUS VARCHAR(1)
+)
+;
+
+
+
+CREATE TABLE lp_t_stage_HRMEVM
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EVMKEY INT
+, EVGKEY INT
+, EVTKEY INT
+, MODKEY INT
+, EVMNBR VARCHAR(15)
+, EVMDESC VARCHAR(64)
+, EVMSTRT DATETIME
+, EVMSTRD DATETIME
+, EVMENDT DATETIME
+, EVMENDD DATETIME
+)
+;
+
+CREATE TABLE lp_t_stage_HRMEVG
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EVGKEY INT
+, EVGNBR VARCHAR(15)
+, EVGDESC1 VARCHAR(64)
+, EVGDESC2 VARCHAR(64)
+, EVGPRC DECIMAL(11,2)
+, EVGPRCP DECIMAL(11,2)
+, EVGPRCC DECIMAL(11,2)
+, EVGCUR VARCHAR(3)
+, EVGADM BIGINT
+, EVGADMC BIGINT
+, EVGSTS VARCHAR(1)
+, EVGWSTS VARCHAR(1)
+, EVGSECI VARCHAR(40)
+, EVGCOMN INT
+, EVGARTS BIGINT
+, EVGCC BIGINT
+, EDDKEY INT
+, EVGTYPE VARCHAR(1)
+, EGSKEY INT
+)
+;
+CREATE TABLE lp_t_stage_HRMEGS
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EGSKEY INT
+, EGSCODE VARCHAR(15)
+, EGSDESC VARCHAR(64)
+)
+;
+CREATE TABLE lp_t_stage_HRMEDD
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, EDDKEY INT
+, EDDCODE VARCHAR(15)
+, EDDDESC VARCHAR(64)
+, EDDMASTER BIGINT
+, EDDCORRES BIGINT
+, EDDSECI VARCHAR(40)
+)
+;
+CREATE TABLE lp_t_stage_HRMWRK
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, COPKEY VARCHAR(2)
+, WRKKEY INT
+, WRKCDE VARCHAR(15)
+, WRKDESC VARCHAR(64)
+, WRKMON VARCHAR(1)
+, WRKTUE VARCHAR(1)
+, WRKWED VARCHAR(1)
+, WRKTHU VARCHAR(1)
+, WRKFRI VARCHAR(1)
+, WRKSAT VARCHAR(1)
+, WRKSUN VARCHAR(1)
+)
+;
+CREATE TABLE lp_t_stage_HRMCPA
+(
+  EMPKEY BIGINT
+, CONNUMB VARCHAR(1)
+, CPAPART VARCHAR(10)
+, CPAPARV VARCHAR(1024)
+)
+;
+CREATE TABLE lp_t_stage_HRMABP
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, COPKEY VARCHAR(2)
+, ABPDAY VARCHAR(1)
+, ABPEXACT VARCHAR(1)
+, ABPODC VARCHAR(1)
+, CALKEY INT
+, WRKKEY INT
+)
+;
+CREATE TABLE lp_t_stage_HRMHOL
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, CALKEY INT
+, HOLDAT DATETIME
+, HOLDESC VARCHAR(64)
+, HOLTYPE VARCHAR(1)
+)
+;
+CREATE TABLE lp_t_stage_HRMCAL
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, CALKEY INT
+, CALCDE VARCHAR(15)
+, CALDESC VARCHAR(64)
+)
+;
+CREATE TABLE lp_t_stage_HRMRUS
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, RUSKEY INT
+, RUSCODE VARCHAR(15)
+, RUSDESC VARCHAR(64)
+)
+;
+
+CREATE TABLE lp_t_stage_HRMETS
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, ETSKEY INT
+, ETYKEY INT
+, ETYKEY2 INT
+, EVGKEY INT
+, SEMKEY INT
+)
+;
+CREATE TABLE lp_t_stage_HRMETY
+(
+  TSCUSR VARCHAR(10)
+, TSCDAT DATETIME
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, ETYKEY INT
+, ETYNBR VARCHAR(15)
+, ETYDESC1 VARCHAR(64)
+, ETYDESC2 VARCHAR(64)
+, ETYSECI VARCHAR(40)
+, ETYDSP INT
+, EDDKEY INT
+)
+;
+CREATE TABLE lp_t_stage_HRMBFC
+(
+  EMPKEY INT
+, CONNUMB VARCHAR(1)
+, BFSEDUC INT
+, BFSRLVL INT
+, BFSPOSIT INT
+, BFSACTIO INT
+, BFSWAGRE INT
+, BFSFLDH INT
+, BFSAPPIN VARCHAR(1)
+, BFSWHOUI DECIMAL(4,2)
+, BFSWLESI INT
+, TSCDAT DATETIME
+, TSCUSR VARCHAR(10)
+, TSCTIM DATETIME
+, TSMUSR VARCHAR(10)
+, TSMDAT DATETIME
+, TSMTIM DATETIME
+, BURNR VARCHAR(20)
+)
+;
+CREATE TABLE lp_t_stage_HRMBUR
+(
+  BURNR VARCHAR(20)
+, BURNAME VARCHAR(64)
+, BUREDUC INT
+, BURRLVL INT
+, BURPOSIT INT
+, BURACTIO INT
+, BURWAGRE INT
+, BURIWAGE INT
+)
+;
+
+</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>Pentaho_Staging</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>258</xloc>
+      <yloc>309</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>START</from>
+      <to>Konfig Werte lesen</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Konfig Werte lesen</from>
+      <to>Struktur und Index  Staging</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>lp_t_dim_Zeit</from>
+      <to>lp_t_dim_ZeitPeriode</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>lp_t_dim_ZeitPeriode</from>
+      <to>lp_t_dim_Tage</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Struktur und Index DWH</from>
+      <to>lp_t_dim_Zeit</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Struktur und Index  Staging</from>
+      <to>Struktur und Index DWH</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+</job>

@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>lp_t_dim_Absenz</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2012&#47;12&#47;21 15:38:07.483</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2012&#47;12&#47;21 15:38:07.483</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50006</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_DWH</name>
+    <server>${DWH_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${DWH_DATABASE}</database>
+    <port>${DWH_PORT}</port>
+    <username>${DWH_USER}</username>
+    <password>${DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_Staging</name>
+    <server>${STAGING_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${STAGING_DATABASE}</database>
+    <port>${STAGING_PORT}</port>
+    <username>${STAGING_USER}</username>
+    <password>${STAGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STAGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCRM</name>
+    <server>${XCRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCRM_DATABASE}</database>
+    <port>${XCRM_PORT}</port>
+    <username>${XCRM_USER}</username>
+    <password>${XCRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCXX</name>
+    <server>${XCXX_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCXX_DATABASE}</database>
+    <port>${XCXX_PORT}</port>
+    <username>${XCXX_USER}</username>
+    <password>${XCXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCXX_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XHRM</name>
+    <server>${XHRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XHRM_DATABASE}</database>
+    <port>${XHRM_PORT}</port>
+    <username>${XHRM_USER}</username>
+    <password>${XHRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XHRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Felder auswählen</from><to>lp_t_dim_Absenz</to><enabled>Y</enabled> </hop>  <hop> <from>Absenzen lesen</from><to>Felder auswählen</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Absenzen lesen</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_Staging</connection>
+    <sql>SELECT DISTINCT	
+	ABZ.COPKEY
+	, ABZ.ABCKEY
+	, ABC.ABCCDE
+	, ABC.ABCDESC
+	, ABZ.ABTKEY
+	, ABT.ABTCDE
+	, ABT.ABTDESC
+	, ABT.ABTUNIT
+	, ABT.ABTAUTH
+	, ABT.ABTCALTI
+	, CASE	
+		WHEN ABT.ABTCALTI = &apos;W&apos; THEN &apos;Arbeitstage&apos;
+		WHEN ABT.ABTCALTI = &apos;C&apos; THEN &apos;Kalendertage&apos;
+		WHEN ABT.ABTCALTI = &apos;H&apos; THEN &apos;Stunden&apos;
+		WHEN ABT.ABTCALTI = &apos;S&apos; THEN &apos;Statistiktage&apos;
+		Else &apos;&apos;
+		END
+		AS AbsenzArtInternKalenderBez
+	, ABT.ABTCALTE
+	, CASE 
+		WHEN ABT.ABTCALTE = &apos;W&apos; THEN &apos;Arbeitstage&apos;
+		WHEN ABT.ABTCALTE = &apos;C&apos; THEN &apos;Kalendertage&apos;
+		WHEN ABT.ABTCALTE = &apos;H&apos; THEN &apos;Stunden&apos;
+		WHEN ABT.ABTCALTE = &apos;S&apos; THEN &apos;Statistiktage&apos;
+		Else &apos;&apos;
+		END
+		AS AbsenzArtExternKalenderBez
+	, ABT.ABTTXTI
+	, ABT.ABTSTAT1
+	, ABT.ABTSTAT2
+	, ABT.ABTSTAT3
+	, ABT.ABTUNSAL
+	, ABT.ABTACT
+	, ABT.ABTCOE
+	, ABT.ABTBALF
+	, ABT.ABTWP
+	, ABT.HR51aA
+	, ABT.HR51xA
+	, ABT.HR51yA
+	, ABT.MASKEY
+
+
+	, ABZ.HRnjcn4A AS idInternStatus
+	, ABS_INTERN.ABSCDE AS InternStatusCode
+	, ABS_INTERN.ABSDESC AS InternStatusBez
+	, ABZ.HRnjcn5A AS idExternStatus
+	, ABS_EXTERN.ABSCDE AS ExternStatusCode
+	, ABS_EXTERN.ABSDESC AS ExternStatusBez
+
+FROM lp_t_stage_HRMABZ ABZ 
+LEFT OUTER JOIN lp_t_stage_HRMABC ABC ON ABZ.ABCKEY = ABC.ABCKEY
+LEFT OUTER JOIN lp_t_stage_HRMABT ABT ON ABZ.ABTKEY = ABT.ABTKEY
+LEFT OUTER JOIN lp_t_stage_HRMABE ABE ON ABZ.ABEKEY = ABE.ABEKEY
+LEFT OUTER JOIN lp_t_stage_HRMABS ABS_INTERN ON ABZ.HRnjcn4A = ABS_INTERN.ABSKEY
+LEFT OUTER JOIN lp_t_stage_HRMABS ABS_EXTERN ON ABZ.HRnjcn5A = ABS_EXTERN.ABSKEY
+ORDER BY ABZ.COPKEY, ABZ.ABCKEY, ABZ.ABTKEY
+
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>613</xloc>
+      <yloc>39</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Felder auswählen</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>COPKEY</name>
+        <rename>ControlPattern</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABCKEY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABCCDE</name>
+        <rename>AbsenzkategorieCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABCDESC</name>
+        <rename>AbsenzkategorieBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTKEY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTCDE</name>
+        <rename>AbsenzartCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTDESC</name>
+        <rename>AbsenzartBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTUNIT</name>
+        <rename>AbsenzartEinheit</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTAUTH</name>
+        <rename>AbsenzartTechnischeAbsenz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTCALTI</name>
+        <rename>AbsenzartInternKalenderCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AbsenzArtInternKalenderBez</name>
+        <rename>AbsenzartInternKalenderBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTCALTE</name>
+        <rename>AbsenzartExternKalenderCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AbsenzArtExternKalenderBez</name>
+        <rename>AbsenzartExternKalenderBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTTXTI</name>
+        <rename>AbsenzartTexteingabe</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTSTAT1</name>
+        <rename>AbsenzartStatistikCode1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTSTAT2</name>
+        <rename>AbsenzartStatistikCode2</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ABTSTAT3</name>
+        <rename>AbsenzartStatistikCode3</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idInternStatus</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>InternStatusCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>InternStatusBez</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idExternStatus</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ExternStatusCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ExternStatusBez</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>612</xloc>
+      <yloc>136</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>lp_t_dim_Absenz</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>lp_t_dim_Absenz</table>
+      <connection>Pentaho_DWH</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>ControlPattern</name>
+          <lookup>ControlPattern</lookup>
+        </key>
+        <key>
+          <name>ABCKEY</name>
+          <lookup>ABCKey</lookup>
+        </key>
+        <key>
+          <name>ABTKEY</name>
+          <lookup>ABTKey</lookup>
+        </key>
+        <key>
+          <name>idInternStatus</name>
+          <lookup>idInternStatus</lookup>
+        </key>
+        <key>
+          <name>idExternStatus</name>
+          <lookup>idExternStatus</lookup>
+        </key>
+        <date>
+          <name>DatumVon</name>
+          <from>DatumVon</from>
+          <to>DatumBis</to>
+        </date>
+        <field>
+          <name>AbsenzkategorieCode</name>
+          <lookup>AbsenzkategorieCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzkategorieBez</name>
+          <lookup>AbsenzkategorieBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartCode</name>
+          <lookup>AbsenzartCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartBez</name>
+          <lookup>AbsenzartBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartEinheit</name>
+          <lookup>AbsenzartEinheit</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartTechnischeAbsenz</name>
+          <lookup>AbsenzartTechnischeAbsenz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartInternKalenderCode</name>
+          <lookup>AbsenzartInternKalenderCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartInternKalenderBez</name>
+          <lookup>AbsenzartInternKalenderBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartExternKalenderCode</name>
+          <lookup>AbsenzartExternKalenderCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartExternKalenderBez</name>
+          <lookup>AbsenzartExternKalenderBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartTexteingabe</name>
+          <lookup>AbsenzartTexteingabe</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartStatistikCode1</name>
+          <lookup>AbsenzartStatistikCode1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartStatistikCode2</name>
+          <lookup>AbsenzartStatistikCode2</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbsenzartStatistikCode3</name>
+          <lookup>AbsenzartStatistikCode3</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>InternStatusCode</name>
+          <lookup>InternStatusCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>InternStatusBez</name>
+          <lookup>InternStatusBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ExternStatusCode</name>
+          <lookup>ExternStatusCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ExternStatusBez</name>
+          <lookup>ExternStatusBez</lookup>
+          <update>Insert</update>
+        </field>
+        <return>
+          <name>idAbsenz</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>612</xloc>
+      <yloc>235</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>

@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>Organisation_Stichtag</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+    <job_status>0</job_status>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2012&#47;01&#47;20 15:28:32.857</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2012&#47;01&#47;20 15:28:32.857</modified_date>
+    <parameters>
+        <parameter>
+            <name>Stichtag</name>
+            <default_value/>
+            <description/>
+        </parameter>
+    </parameters>
+  <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50006</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_DWH</name>
+    <server>${DWH_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${DWH_DATABASE}</database>
+    <port>${DWH_PORT}</port>
+    <username>${DWH_USER}</username>
+    <password>${DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_Staging</name>
+    <server>${STAGING_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${STAGING_DATABASE}</database>
+    <port>${STAGING_PORT}</port>
+    <username>${STAGING_USER}</username>
+    <password>${STAGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STAGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCRM</name>
+    <server>${XCRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCRM_DATABASE}</database>
+    <port>${XCRM_PORT}</port>
+    <username>${XCRM_USER}</username>
+    <password>${XCRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCXX</name>
+    <server>${XCXX_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCXX_DATABASE}</database>
+    <port>${XCXX_PORT}</port>
+    <username>${XCXX_USER}</username>
+    <password>${XCXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCXX_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XHRM</name>
+    <server>${XHRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XHRM_DATABASE}</database>
+    <port>${XHRM_PORT}</port>
+    <username>${XHRM_USER}</username>
+    <password>${XHRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XHRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+    <slaveservers>
+         <slaveserver><name>BI4HR</name><hostname>ARWEN</hostname><port>9081</port><webAppName>pentaho-di&#47;kettle</webAppName><username>admin</username><password>Encrypted 2be98afc86aa7f2e4cb79bd75dd80aace</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+    </slaveservers>
+<job-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></job-log-table>
+<jobentry-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+   <pass_batchid>N</pass_batchid>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>277</xloc>
+      <yloc>125</yloc>
+      </entry>
+    <entry>
+      <name>Rekursive SQL Abfrage</name>
+      <description/>
+      <type>SQL</type>
+      <sql>SET ANSI_NULLS ON
+;
+SET QUOTED_IDENTIFIER ON
+;
+SET ANSI_PADDING ON
+;
+IF OBJECT_ID(&apos;tempdb..#ORG&apos;) IS NOT NULL
+DROP TABLE #ORG
+;
+IF OBJECT_ID(&apos;tempdb..#ORG2&apos;) IS NOT NULL
+DROP TABLE #ORG2
+;
+WITH RecursiveCTE
+As 
+( SELECT  OUNDESC
+ , p.ORGCHDOU
+ , CAST(OUN.OUNDESC AS VARCHAR(MAX)) AS TreePath
+ , CAST(CASE WHEN OUN.OLVCODE = &apos;&apos; THEN RTRIM(OUN.OUNTYPE) ELSE OUN.OLVCODE END AS VARCHAR(MAX)) AS OLVCODE
+ , CAST(OUNTYPE AS VARCHAR(MAX)) AS OUNTYPE
+ , ORGPNTOU  
+ FROM lp_t_stage_HRMORG p 
+ INNER JOIN lp_t_stage_HRMOUN OUN ON
+	P.ORGCHDOU = OUN.OUNKEY
+ WHERE p.ORGPNTOU = 0 AND CONVERT(${DB_DATEFORMAT},&apos;${Stichtag}&apos;,${DB_DATESTYLE}) BETWEEN ORGFROM AND ORGUNTIL  AND CONVERT(${DB_DATEFORMAT},&apos;${Stichtag}&apos;,${DB_DATESTYLE}) BETWEEN OUNFROM AND OUNUNTIL AND ORSID = ${XHRM_ORSID}
+ UNION ALL
+ SELECT OUN.OUNDESC
+  , p.ORGCHDOU
+  , CAST(H.TreePath + &apos;,&apos;
+   + CAST(OUN.OUNDESC AS VARCHAR(100)) AS VARCHAR(MAX))
+   AS TreePath
+   , CAST(H.OLVCODE + &apos;,&apos;
+   + CAST(CASE WHEN OUN.OLVCODE = &apos;&apos; THEN RTRIM(OUN.OUNTYPE) ELSE OUN.OLVCODE END AS VARCHAR(100)) AS VARCHAR(MAX)) AS OLVCODE
+   , CAST(H.OUNTYPE + &apos;,&apos; 
+   + CAST(OUN.OUNTYPE AS VARCHAR(MAX)) AS VARCHAR(MAX)) AS OUNTYPE
+  , p.ORGPNTOU  
+ FROM lp_t_stage_HRMORG p 
+  INNER JOIN lp_t_stage_HRMOUN OUN ON
+	P.ORGCHDOU = OUN.OUNKEY
+ INNER JOIN RecursiveCTE H
+ ON H.ORGCHDOU = p.ORGPNTOU  
+  WHERE CONVERT(${DB_DATEFORMAT},&apos;${Stichtag}&apos;,${DB_DATESTYLE}) BETWEEN ORGFROM AND ORGUNTIL AND CONVERT(${DB_DATEFORMAT},&apos;${Stichtag}&apos;,${DB_DATESTYLE}) BETWEEN OUNFROM AND OUNUNTIL AND ORSID = ${XHRM_ORSID}
+)  
+SELECT OUNDESC
+ , ORGCHDOU
+ , ORGPNTOU 
+ , TreePath
+ , OLVCODE
+ , OUNTYPE
+INTO #ORG
+FROM RecursiveCTE
+
+
+
+
+;
+WITH CTE AS (
+SELECT ORGCHDOU, OUNDESC
+ ,CONVERT(XML,&apos;&lt;OE&gt;&lt;Lvl&gt;&apos;
+        + REPLACE(REPLACE([TreePath],&apos;&amp;&apos;,&apos;&amp;amp;&apos;),&apos;,&apos;, &apos;&lt;&#47;Lvl&gt;&lt;Lvl&gt;&apos;) + &apos;&lt;&#47;Lvl&gt;&lt;&#47;OE&gt;&apos;)
+ AS OE_Hierarchy
+  ,CONVERT(XML,&apos;&lt;Ebene&gt;&lt;Lvl&gt;&apos;
+        + REPLACE(REPLACE([OLVCODE],&apos;&amp;&apos;,&apos;&amp;amp;&apos;),&apos;,&apos;, &apos;&lt;&#47;Lvl&gt;&lt;Lvl&gt;&apos;) + &apos;&lt;&#47;Lvl&gt;&lt;&#47;Ebene&gt;&apos;)
+ AS Ebene_Hierarchy
+  ,CONVERT(XML,&apos;&lt;Typ&gt;&lt;Lvl&gt;&apos;
+        + REPLACE(REPLACE([OUNTYPE],&apos;&amp;&apos;,&apos;&amp;amp;&apos;),&apos;,&apos;, &apos;&lt;&#47;Lvl&gt;&lt;Lvl&gt;&apos;) + &apos;&lt;&#47;Lvl&gt;&lt;&#47;Typ&gt;&apos;)
+ AS Typ_Hierarchy
+FROM #ORG a
+
+)
+, EbeneBreakdown AS (
+SELECT    ORGCHDOU
+ , OUNDESC
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[1]&apos;,&apos;varchar(100)&apos;) AS [OE1]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[2]&apos;,&apos;varchar(100)&apos;) AS [OE2]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[3]&apos;,&apos;varchar(100)&apos;) AS [OE3]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[4]&apos;,&apos;varchar(100)&apos;) AS [OE4]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[5]&apos;,&apos;varchar(100)&apos;) AS [OE5] 
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[6]&apos;,&apos;varchar(100)&apos;) AS [OE6]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[7]&apos;,&apos;varchar(100)&apos;) AS [OE7]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[8]&apos;,&apos;varchar(100)&apos;) AS [OE8]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[9]&apos;,&apos;varchar(100)&apos;) AS [OE9]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[10]&apos;,&apos;varchar(100)&apos;) AS [OE10]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[11]&apos;,&apos;varchar(100)&apos;) AS [OE11]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[12]&apos;,&apos;varchar(100)&apos;) AS [OE12]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[13]&apos;,&apos;varchar(100)&apos;) AS [OE13]
+ , OE_Hierarchy.value(&apos;&#47;OE[1]&#47;Lvl[14]&apos;,&apos;varchar(100)&apos;) AS [OE14]
+ 
+  , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[1]&apos;,&apos;varchar(100)&apos;) AS [Ebene1]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[2]&apos;,&apos;varchar(100)&apos;) AS [Ebene2]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[3]&apos;,&apos;varchar(100)&apos;) AS [Ebene3]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[4]&apos;,&apos;varchar(100)&apos;) AS [Ebene4]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[5]&apos;,&apos;varchar(100)&apos;) AS [Ebene5] 
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[6]&apos;,&apos;varchar(100)&apos;) AS [Ebene6]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[7]&apos;,&apos;varchar(100)&apos;) AS [Ebene7]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[8]&apos;,&apos;varchar(100)&apos;) AS [Ebene8]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[9]&apos;,&apos;varchar(100)&apos;) AS [Ebene9]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[10]&apos;,&apos;varchar(100)&apos;) AS [Ebene10]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[11]&apos;,&apos;varchar(100)&apos;) AS [Ebene11]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[12]&apos;,&apos;varchar(100)&apos;) AS [Ebene12]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[13]&apos;,&apos;varchar(100)&apos;) AS [Ebene13]
+ , Ebene_Hierarchy.value(&apos;&#47;Ebene[1]&#47;Lvl[14]&apos;,&apos;varchar(100)&apos;) AS [Ebene14]
+ 
+   , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[1]&apos;,&apos;varchar(100)&apos;) AS [Typ1]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[2]&apos;,&apos;varchar(100)&apos;) AS [Typ2]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[3]&apos;,&apos;varchar(100)&apos;) AS [Typ3]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[4]&apos;,&apos;varchar(100)&apos;) AS [Typ4]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[5]&apos;,&apos;varchar(100)&apos;) AS [Typ5] 
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[6]&apos;,&apos;varchar(100)&apos;) AS [Typ6]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[7]&apos;,&apos;varchar(100)&apos;) AS [Typ7]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[8]&apos;,&apos;varchar(100)&apos;) AS [Typ8]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[9]&apos;,&apos;varchar(100)&apos;) AS [Typ9]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[10]&apos;,&apos;varchar(100)&apos;) AS [Typ10]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[11]&apos;,&apos;varchar(100)&apos;) AS [Typ11]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[12]&apos;,&apos;varchar(100)&apos;) AS [Typ12]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[13]&apos;,&apos;varchar(100)&apos;) AS [Typ13]
+ , Typ_Hierarchy.value(&apos;&#47;Typ[1]&#47;Lvl[14]&apos;,&apos;varchar(100)&apos;) AS [Typ14]
+ 
+ FROM cte)
+SELECT
+  OE1
+, COALESCE(OE2, OE1) AS OE2
+, COALESCE(OE3, OE2, OE1) AS OE3
+, COALESCE(OE4, OE3, OE2, OE1) AS OE4
+, COALESCE(OE5, OE4, OE3, OE2, OE1) AS OE5
+, COALESCE(OE6, OE5, OE4, OE3, OE2, OE1) AS OE6
+, COALESCE(OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE7
+, COALESCE(OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE8
+, COALESCE(OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE9
+, COALESCE(OE10, OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE10
+, COALESCE(OE11, OE10, OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE11
+, COALESCE(OE12, OE11, OE10, OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE12
+, COALESCE(OE13, OE12, OE11, OE10, OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE13
+, COALESCE(OE14, OE13, OE12, OE11, OE10, OE9, OE8, OE7, OE6, OE5, OE4, OE3, OE2, OE1) AS OE14
+
+,  Ebene1
+, COALESCE(Ebene2, Ebene1) AS Ebene2
+, COALESCE(Ebene3, Ebene2, Ebene1) AS Ebene3
+, COALESCE(Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene4
+, COALESCE(Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene5
+, COALESCE(Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene6
+, COALESCE(Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene7
+, COALESCE(Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene8
+, COALESCE(Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene9
+, COALESCE(Ebene10, Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene10
+, COALESCE(Ebene11, Ebene10, Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene11
+, COALESCE(Ebene12, Ebene11, Ebene10, Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene12
+, COALESCE(Ebene13, Ebene12, Ebene11, Ebene10, Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene13
+, COALESCE(Ebene14, Ebene13, Ebene12, Ebene11, Ebene10, Ebene9, Ebene8, Ebene7, Ebene6, Ebene5, Ebene4, Ebene3, Ebene2, Ebene1) AS Ebene14
+
+,  Typ1
+, COALESCE(Typ2, Typ1) AS Typ2
+, COALESCE(Typ3, Typ2, Typ1) AS Typ3
+, COALESCE(Typ4, Typ3, Typ2, Typ1) AS Typ4
+, COALESCE(Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ5
+, COALESCE(Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ6
+, COALESCE(Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ7
+, COALESCE(Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ8
+, COALESCE(Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ9
+, COALESCE(Typ10, Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ10
+, COALESCE(Typ11, Typ10, Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ11
+, COALESCE(Typ12, Typ11, Typ10, Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ12
+, COALESCE(Typ13, Typ12, Typ11, Typ10, Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ13
+, COALESCE(Typ14, Typ13, Typ12, Typ11, Typ10, Typ9, Typ8, Typ7, Typ6, Typ5, Typ4, Typ3, Typ2, Typ1) AS Typ14
+
+, OUNDESC AS OEBezeichnung
+, ORGCHDOU AS idOE
+, CONVERT(${DB_DATEFORMAT},&apos;${Stichtag}&apos;,${DB_DATESTYLE}) AS Stichtag
+INTO #ORG2
+FROM EbeneBreakdown
+;
+INSERT INTO lp_t_tmp_Organisation (
+			OE1
+           ,OE2
+           ,OE3
+           ,OE4
+           ,OE5
+           ,OE6
+           ,OE7
+           ,OE8
+           ,OE9
+           ,OE10
+           ,OE11
+           ,OE12
+           ,OE13
+           ,OE14
+           ,Ebene1
+           ,Ebene2
+           ,Ebene3
+           ,Ebene4
+           ,Ebene5
+           ,Ebene6
+           ,Ebene7
+           ,Ebene8
+           ,Ebene9
+           ,Ebene10
+           ,Ebene11
+           ,Ebene12
+           ,Ebene13
+           ,Ebene14
+           ,Typ1
+           ,Typ2
+           ,Typ3
+           ,Typ4
+           ,Typ5
+           ,Typ6
+           ,Typ7
+           ,Typ8
+           ,Typ9
+           ,Typ10
+           ,Typ11
+           ,Typ12
+           ,Typ13
+           ,Typ14           
+           ,OEBezeichnung
+           ,idOE
+           ,Stichtag
+         )
+SELECT * FROM #ORG2</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>Pentaho_Staging</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>275</xloc>
+      <yloc>222</yloc>
+      </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>276</xloc>
+      <yloc>426</yloc>
+      </entry>
+    <entry>
+      <name>Organisation Stufenbereinigt</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Job.Filename.Directory}&#47;Organisation_Stichtag_StufenBereinigt.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>276</xloc>
+      <yloc>324</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>Rekursive SQL Abfrage</from>
+      <to>Organisation Stufenbereinigt</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Organisation Stufenbereinigt</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Rekursive SQL Abfrage</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+</job>

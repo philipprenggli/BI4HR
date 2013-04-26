@@ -1,0 +1,2379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>lp_t_dim_Mitarbeiter</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+         <slaveserver><name>BI4HR</name><hostname>ARWEN</hostname><port>9081</port><webAppName>pentaho-di&#47;kettle</webAppName><username>admin</username><password>Encrypted 2be98afc86aa7f2e4cb79bd75dd80aace</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2012&#47;01&#47;06 14:34:39.757</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2012&#47;01&#47;06 14:34:39.757</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>AgileBI</name>
+    <server>localhost</server>
+    <type>MONETDB</type>
+    <access>Native</access>
+    <database>pentaho-instaview</database>
+    <port>50006</port>
+    <username>monetdb</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_DWH</name>
+    <server>${DWH_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${DWH_DATABASE}</database>
+    <port>${DWH_PORT}</port>
+    <username>${DWH_USER}</username>
+    <password>${DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Pentaho_Staging</name>
+    <server>${STAGING_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${STAGING_DATABASE}</database>
+    <port>${STAGING_PORT}</port>
+    <username>${STAGING_USER}</username>
+    <password>${STAGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STAGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCRM</name>
+    <server>${XCRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCRM_DATABASE}</database>
+    <port>${XCRM_PORT}</port>
+    <username>${XCRM_USER}</username>
+    <password>${XCRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XCXX</name>
+    <server>${XCXX_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XCXX_DATABASE}</database>
+    <port>${XCXX_PORT}</port>
+    <username>${XCXX_USER}</username>
+    <password>${XCXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XCXX_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>XHRM</name>
+    <server>${XHRM_HOST}</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>${XHRM_DATABASE}</database>
+    <port>${XHRM_PORT}</port>
+    <username>${XHRM_USER}</username>
+    <password>${XHRM_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${XHRM_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Umbennen der Felder</from><to>lp_t_dim_Mitarbeiter</to><enabled>Y</enabled> </hop>  <hop> <from>Geburtstag</from><to>Gestorben</to><enabled>Y</enabled> </hop>  <hop> <from>Gestorben</from><to>Eintritt</to><enabled>Y</enabled> </hop>  <hop> <from>Eintritt</from><to>Eintritt effektiv</to><enabled>Y</enabled> </hop>  <hop> <from>Eintritt effektiv</from><to>Eintritt theoretisch</to><enabled>Y</enabled> </hop>  <hop> <from>Eintritt theoretisch</from><to>Austritt</to><enabled>Y</enabled> </hop>  <hop> <from>Austritt</from><to>Austritt effektiv</to><enabled>Y</enabled> </hop>  <hop> <from>Austritt effektiv</from><to>Eintritt PK</to><enabled>Y</enabled> </hop>  <hop> <from>Eintritt PK</from><to>Austritt PK</to><enabled>Y</enabled> </hop>  <hop> <from>Austritt PK</from><to>Kündigungsdatum</to><enabled>Y</enabled> </hop>  <hop> <from>Kündigungsdatum</from><to>Probezeit</to><enabled>Y</enabled> </hop>  <hop> <from>Probezeit</from><to>Umbennen der Felder</to><enabled>Y</enabled> </hop>  <hop> <from>Mitarbeiter lesen</from><to>Geburtstag</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Austritt</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHLEAD</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitAustritt</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>778</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Austritt PK</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHPFULD</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitAustrittPK</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>1090</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Austritt effektiv</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHLEAD2</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitAustrittEffektiv</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>882</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Eintritt</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHENTD</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitEintritt</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>466</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Eintritt PK</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHPFED</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitEintrittPK</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>986</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Eintritt effektiv</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHENTD2</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitEintrittEffektiv</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>570</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Eintritt theoretisch</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHTHED</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitEintrittTheoretisch</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>674</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Geburtstag</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>EMPBORN</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitGeburtstag</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>245</xloc>
+      <yloc>260</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Gestorben</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>EMPDECEA</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitGestorben</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>247</xloc>
+      <yloc>362</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Kündigungsdatum</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHQUITD</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitAustrittKuendigung</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>246</xloc>
+      <yloc>1176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Mitarbeiter lesen</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_Staging</connection>
+    <sql>SELECT
+
+	COH.EMPKEY
+	, COH.CONNUMB
+
+	, EMP.EMPNUM
+	, EMP.EMPNAME
+	, EMP.EMPFNAME
+	, EMP.EMPNFN
+	, EMP.EMPSEX
+	, EMP.EMPLANG
+	, EMP.EMPBORN
+	, EMP.EMPDECEA
+	, EMP.EMPPRSTP
+	, EMP.idGeschlecht
+	, EMP.Geschlecht
+	, EMP.GeschlechtBez
+
+	, COHPERY
+	, COHPERM
+	, COHCONTY
+	, COHCOPCD
+	, COHPCACD
+	, COHCOUNT
+	, COHSTATE
+	, COHWTATF
+	, COHWHTSX
+	, COHWHTZP
+	, COHPFKEY
+	, COHPROFC
+	, COHASMCD
+	, COHFAMES
+	, COHMANPT
+	, COHCALCC
+	, COHPARTT
+	, COHPTICH
+	, COHPTCHG
+	, COHPARTP
+	, COHPCXCU
+	, COHDTAXF
+	, COHTAXMU
+	, COHAMFM
+	, COHAMFS
+	, COHWTFPM
+	, COHWTPFS
+	, COHFRTIL
+	, COHDOEMP
+	, COHSTATD
+	, COHWORKD
+	, COHHOLID
+	, COHPOSLE
+	, COHPOSLY
+	, COHPOS
+	, COHPOSY
+	, COHAGE
+	, COHAGEY
+	, COHCHIEP
+	, COHPAYAL
+	, COHSTRNA
+	, COHSTRNB
+	, COHSTRNC
+	, CONSTRND
+	, COHSTRNE
+	, COHCOSTC
+	, COHEMPPC
+	, COHCHBCA
+	, COHCHSTA
+	, COHCHCOU
+	, COHFICO
+	, COHCHCOM
+	, COHTAXNO
+	, Periode
+	, COH.DatumVon
+	, COH.DatumBis
+
+	, KST.CX2ibA
+	, KST.CX2zlA
+	, KST.CX2zmA
+	, KST.UFgnA
+
+	, FIP.FIPCDE
+	, FIP.FIPDESC
+	, FIP.FIPFICOM
+	, FIP.FIPFCOMD
+	, FIP.FIPITMGR
+	, FIP.FIPFIPCD
+
+	, CAC.CACCODE
+	, CAC.CACDESC
+
+	, UVI.UVIID
+	, UVI.UVINAME
+	, UVI.UVISUBNO
+	, UVI.UVICUSNO
+	, UVI.UVICONNR
+
+	, BRA.BRACODE
+	, BRA.BRADESC
+
+	, UVG.UVGBS
+	, UVG.UVGDESC
+
+	, FES.FESKEY
+	, FES.FESCODE
+	, FES.FESDESC
+	, FES.FESCUSNO
+
+	, SSE.SSEKEY
+	, SSE.SSECODE
+	, SSE.SSEDESC
+	, SSE.SSEACNUM
+
+	, APC.APCKEY
+	, APC.HRMAPC
+	, APC.APCDESC
+
+	, PRO.PROKEY
+	, PRO.PROCODE
+	, PRO.PRODESC
+	, PRO.PROLVL 
+
+	, PCA.PCAKEY
+	, PCA.PCACODE
+	, PCA.PCALDESC
+	, PCA.PCASDESC
+	, PCA.PCAUVGDE
+	, PCA.PCAUVGSU
+	, PCA.idPersonalkategorie
+	, PCA.Personalkategorie
+	, PCA.Gruppe1 AS PersonalkategorieGruppe1
+
+	, CONT.COTKEY
+	, CONT.COTCODE
+	, CONT.COTLDESC
+	, CONT.COTSDESC
+	, CONT.idVertragsart
+	, CONT.Vertragsart
+	, CONT.Gruppe1 AS VertragsartGruppe1
+
+	, COM.COMPANY
+	, COM.COMDESC
+	, COM.idUnternehmen
+	, COM.Unternehmen
+	, COM.Gruppe1 AS UnternehmenGruppe1
+
+	, ELH.ELHENTPY
+	, ELH.ELHENTPM
+	, ELH.ELHENTD
+	, ELH.ELHENTD2
+	, ELH.ELHLEAPY
+	, ELH.ELHLEAPM
+	, ELH.ELHLEAD
+	, ELH.ELHLEAD2
+	, ELH.ELHTHED
+	, ELH.ELHPFED
+	, ELH.ELHPFULD
+	, ELH.ELHREM
+	, ELH.ELHQUITD
+	, ELH.ELHPROBD
+	, ELH.ELHREM2
+	, ELH.PeriodeVon
+	, ELH.PeriodeBis
+
+	, LEM.LEMKEY
+	, LEM.LEMCODE
+	, LEM.LEMSDESC
+	, LEM.LEMLDESC
+	, LEM.idAustrittsgrund
+	, LEM.Austrittsgrund
+	, LEM.Gruppe1 AS AustrittsgrundGruppe1
+	, LEM.Netto AS AustrittsgrundNetto
+
+	, ENM.ENMKEY
+	, ENM.ENMCODE
+	, ENM.ENMSDESC
+	, ENM.ENMLDESC
+	, ENM.idEintrittsgrund
+	, ENM.Eintrittsgrund
+	, ENM.Gruppe1 AS EintrittsgrundGruppe1
+
+	, ADljA AS Adresszeile1
+	, ADlkA AS Adresszeile2
+	, ADpkA AS AdresszeileNr
+	, ADplA AS AdresszeileNrCode
+	, ADkeA AS PLZ
+	, ADkiA AS Ort
+	, ADg1A AS KantonKurz
+	, ADfrA AS LandKurz
+
+	, CASE COHPAYAL
+		WHEN &apos;O&apos; THEN 1
+		ELSE 0
+	  END AS Nachzahlung
+
+
+	, CASE
+		WHEN Periode = Year(ELHLEAD)*100 + MONTH(ELHLEAD) THEN 1
+		else 0
+	  END AS Austrittsperiode
+
+	, CASE
+		WHEN Periode = Year(ELHLEAD)*100 + MONTH(ELHLEAD) AND LEM.Netto = 1 THEN 1
+		else 0
+	  END AS AustrittsperiodeNetto
+
+	, CASE
+		WHEN Periode = Year(ELHENTD)*100 + MONTH(ELHENTD) THEN 1
+		else 0
+	  END AS Eintrittsperiode
+
+	, CONVERT(VARCHAR,DATEDIFF(year, EMPBORN, COH.DatumBis) - (CASE WHEN DATEADD(year, DATEDIFF(year, EMPBORN, COH.DatumBis), EMPBORN) &gt; COH.DatumBis THEN 1 ELSE 0 END)) as AlterJahre
+
+
+	, CASE 
+		WHEN COHPAYAL = &apos;O&apos; THEN 0
+		WHEN Periode &gt; Year(ELHLEAD)*100 + MONTH(ELHLEAD) AND YEAR(ELHLEAD) &gt; 1900 THEN 0
+		ELSE ROUND(COHPARTT&#47;100,2)
+	  END AS FTE
+
+
+	, lp_t_par_Alter.AlterGruppe1
+	, lp_t_par_Alter.AlterGruppe2
+	, lp_t_par_Alter.AlterGruppe3
+
+	, CAST(ISNULL(CPA_CALENDAR.CPAPARV, lp_t_stage_HRMABP.CALKEY) AS INT) AS KalenderEnumerator
+	, lp_t_stage_HRMCAL.CALCDE AS KalenderCode
+	, lp_t_stage_HRMCAL.CALDESC AS KalenderBez
+	, CAST(ISNULL(CPA_WORKDAY.CPAPARV, lp_t_stage_HRMABP.WRKKEY) AS INT) AS ArbeitstagEnumerator
+	, lp_t_stage_HRMWRK.WRKCDE AS ArbeitstagCode
+	, lp_t_stage_HRMWRK.WRKDESC AS ArbeitstagBez
+	, lp_t_stage_HRMBFC.BURNR AS BURNr
+	, lp_t_stage_HRMBUR.BURNAME AS BURBez
+
+FROM lp_t_stage_HRMCOH COH
+
+
+LEFT OUTER JOIN lp_t_stage_HRMEMP EMP ON
+	COH.EMPKEY = EMP.EMPKEY
+	
+LEFT OUTER JOIN lp_t_stage_HRMELH ELH ON
+	COH.EMPKEY = ELH.EMPKEY AND
+	COH.CONNUMB = ELH.CONNUMB AND
+	COH.Periode BETWEEN ELH.PeriodeVon AND ELH.PeriodeBis
+	
+LEFT OUTER JOIN lp_t_stage_HRMENM ENM ON
+	ELH.ELHENTMO = ENM.ENMKEY
+	
+LEFT OUTER JOIN lp_t_stage_HRMLEM LEM ON
+	ELH.ELHLEAMO = LEM.LEMKEY
+	
+LEFT OUTER JOIN lp_t_stage_HRMCOM COM ON
+	COH.COMPANY = COM.COMPANY
+
+LEFT OUTER JOIN lp_t_stage_CX4CPT KST ON
+	COH.COHCOSTC = KST.CX2IBA AND
+	COH.COHFICO = KST.CX1j8A
+
+LEFT OUTER JOIN lp_t_stage_HRMFIP FIP ON
+	COH.FIPCDE = FIP.FIPCDE AND
+	COH.COHCOPCD = FIP.COPKEY
+
+LEFT OUTER JOIN lp_t_stage_HRMCAC CAC ON
+	COH.COHCALCC = CAC.CACCODE
+
+LEFT OUTER JOIN lp_t_stage_HRMUVI UVI ON
+	COH.UVIID = UVI.UVIID
+
+LEFT OUTER JOIN lp_t_stage_HRMBRA BRA ON
+	COH.BRACODE = BRA.BRACODE
+
+LEFT OUTER JOIN lp_t_stage_HRMUVG UVG ON
+	COH.UVGBS = UVG.UVGBS
+
+LEFT OUTER JOIN lp_t_stage_HRMFES FES ON
+	COH.COHFAMES = FES.FESKEY
+
+LEFT OUTER JOIN lp_t_stage_HRMSSE SSE ON
+	COH.SSEKEY = SSE.SSEKEY
+
+LEFT OUTER JOIN lp_t_stage_HRMAPC APC ON
+	COH.COHASMCD = APC.APCKEY
+
+LEFT OUTER JOIN lp_t_stage_HRMPRO PRO ON
+	COH.COHPROFC = PRO.PROKEY
+
+LEFT OUTER JOIN lp_t_stage_HRMPCA PCA ON
+	COH.COHPCACD = PCA.PCAKEY AND
+	COH.COHCOPCD = PCA.COPKEY
+	
+LEFT OUTER JOIN lp_t_stage_HRMCOT CONT ON
+	COH.COHCONTY = CONT.COTKEY
+	
+LEFT OUTER JOIN lp_t_stage_HRMEMC EMC ON
+	COH.EMPKEY = EMC.EMPKEY AND
+	EMC.EMCWACA = &apos;Y&apos;
+
+LEFT OUTER JOIN (
+	SELECT	ADbsA AS MACO, ADbtA AS COCO, MAX(ADPHA) AS AdressNr, DatumBis
+	FROM	lp_t_stage_ADAdAs
+	INNER JOIN (
+		SELECT DISTINCT DatumBis 
+		FROM	lp_t_stage_HRMCOH
+		) Datum ON
+		Datum.DatumBis BETWEEN AD167A AND ADq8A 
+	WHERE	ADfaA = &apos;PTT&apos;
+	GROUP BY ADbsA, ADbtA, DatumBis 
+) AdressNr ON
+	EMC.PADMACON = AdressNr.MACO AND
+	EMC.PADCORES = AdressNr.COCO AND
+	COH.DatumBis = AdressNr.DatumBis
+
+LEFT OUTER JOIN lp_t_stage_ADAD Adresse ON
+	AdressNr.AdressNr = Adresse.ADphA	
+	
+LEFT OUTER JOIN lp_t_stage_ADCI PLZ ON
+	Adresse.ADkdA = PLZ.ADkdA 
+	
+LEFT OUTER JOIN lp_t_par_Alter ON CONVERT(VARCHAR,DATEDIFF(year, EMPBORN, COH.DatumBis) - (CASE WHEN DATEADD(year, DATEDIFF(year, EMPBORN, COH.DatumBis), EMPBORN) &gt; COH.DatumBis THEN 1 ELSE 0 END)) = lp_t_par_Alter.AlterJahre
+
+--Kalender und Arbeitstag-Konfiguration
+LEFT OUTER JOIN lp_t_stage_HRMCPA CPA_CALENDAR ON COH.EMPKEY = CPA_CALENDAR.EMPKEY AND CPA_CALENDAR.CPAPART = &apos;CALENDAR&apos;
+LEFT OUTER JOIN lp_t_stage_HRMCPA CPA_WORKDAY ON COH.EMPKEY = CPA_WORKDAY.EMPKEY AND CPA_WORKDAY.CPAPART = &apos;WORKDAY&apos;
+LEFT OUTER JOIN lp_t_stage_HRMABP ON COH.COHCOPCD = lp_t_stage_HRMABP.COPKEY
+--Falls Kalender und Arbeitstag invididuell gesetzt ist, diese nehmen. Ansonsten die Firmenübergreifenden
+LEFT OUTER JOIN lp_t_stage_HRMCAL ON ISNULL(CPA_CALENDAR.CPAPARV, lp_t_stage_HRMABP.CALKEY) = lp_t_stage_HRMCAL.CALKEY
+LEFT OUTER JOIN lp_t_stage_HRMWRK ON ISNULL(CPA_WORKDAY.CPAPARV, lp_t_stage_HRMABP.WRKKEY) = lp_t_stage_HRMWRK.WRKKEY
+--Bur-Nummer hinzufuegen
+LEFT OUTER JOIN lp_t_stage_HRMBFC ON COH.EMPKEY = lp_t_stage_HRMBFC.EMPKEY AND COH.CONNUMB = lp_t_stage_HRMBFC.CONNUMB
+LEFT OUTER JOIN lp_t_stage_HRMBUR ON lp_t_stage_HRMBFC.BURNR = lp_t_stage_HRMBUR.BURNR
+
+ORDER BY EMPKEY, CONNUMB, COHPERY, COHPERM
+
+
+
+
+
+
+
+
+
+
+</sql>
+    <limit/>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>248</xloc>
+      <yloc>137</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Probezeit</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Pentaho_DWH</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>1000</cache_size>
+    <lookup>
+      <schema/>
+      <table>lp_t_dim_Zeit</table>
+      <orderby>Datum</orderby>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ELHPROBD</name>
+        <field>Datum</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idZeit</name>
+        <rename>idZeitProbezeitEnde</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>245</xloc>
+      <yloc>1250</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Umbennen der Felder</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>APCDESC</name>
+        <rename>ASMBerufBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>APCKEY</name>
+        <rename>ASMBerufKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Adresszeile1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Adresszeile2</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AdresszeileNr</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AdresszeileNrCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AlterGruppe1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AlterGruppe2</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AlterGruppe3</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AlterJahre</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Austrittsgrund</name>
+        <rename>lpAustrittsgrund</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AustrittsgrundGruppe1</name>
+        <rename>lpAustrittsgrundGruppe1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AustrittsgrundNetto</name>
+        <rename>lpAustrittsgrundNetto</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Austrittsperiode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>AustrittsperiodeNetto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>BRACODE</name>
+        <rename>GesellschaftCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>BRADESC</name>
+        <rename>GesellschaftBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CACCODE</name>
+        <rename>AbrechnungskreisCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CACDESC</name>
+        <rename>AbrechnungskreisBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COHPARTT</name>
+        <rename>BG</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COMDESC</name>
+        <rename>UnternehmenBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COMPANY</name>
+        <rename>UnternehmenNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CONNUMB</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COTCODE</name>
+        <rename>VertragsartCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COTKEY</name>
+        <rename>VertragsartEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COTLDESC</name>
+        <rename>VertragsartBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>COTSDESC</name>
+        <rename>VertragsartBezKurz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CX2ibA</name>
+        <rename>KSTEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CX2zlA</name>
+        <rename>KSTBezKurz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CX2zmA</name>
+        <rename>KSTBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DatumBis</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DatumVon</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHENTD</name>
+        <rename>Eintritt</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHENTD2</name>
+        <rename>EintrittEffektiv</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHENTPM</name>
+        <rename>EintrittMonat</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHENTPY</name>
+        <rename>EintrittJahr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHLEAD</name>
+        <rename>Austritt</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHLEAD2</name>
+        <rename>AustrittEffektiv</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHLEAPM</name>
+        <rename>AustrittMonat</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHLEAPY</name>
+        <rename>AustrittJahr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHPFED</name>
+        <rename>EintrittPK</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHPFULD</name>
+        <rename>AustrittPK</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHPROBD</name>
+        <rename>ProbezeitEnde</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHQUITD</name>
+        <rename>AustrittKuendigung</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHREM</name>
+        <rename>EintrittBemerkung</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHREM2</name>
+        <rename>AustrittBemerkung</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ELHTHED</name>
+        <rename>EintrittTheoretisch</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPBORN</name>
+        <rename>Geburtstag</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPDECEA</name>
+        <rename>Gestorben</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPFNAME</name>
+        <rename>Vorname</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPKEY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPLANG</name>
+        <rename>Sprache</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPNAME</name>
+        <rename>Name</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPNFN</name>
+        <rename>NameVorname</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EMPNUM</name>
+        <rename>MaNR</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ENMCODE</name>
+        <rename>EintrittsgrundCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ENMKEY</name>
+        <rename>EintrittsgrundEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ENMLDESC</name>
+        <rename>EintrittsgrundBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ENMSDESC</name>
+        <rename>EintrittsgrundBezKurz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Eintrittsgrund</name>
+        <rename>lpEintrittsgrund</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EintrittsgrundGruppe1</name>
+        <rename>lpEintrittsgrundGruppe1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Eintrittsperiode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FESCODE</name>
+        <rename>FamilienausgleichskasseCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FESCUSNO</name>
+        <rename>FamilienausgleichskasseKundenNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FESDESC</name>
+        <rename>FamilienausgleichskasseBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FESKEY</name>
+        <rename>FamilienausgleichskasseEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPCDE</name>
+        <rename>FibuPatternCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPDESC</name>
+        <rename>FibuPatternBezeichnung</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPFCOMD</name>
+        <rename>FibuPatternUnternehmenBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPFICOM</name>
+        <rename>FibuPatternUnternehmen</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPFIPCD</name>
+        <rename>FibuPatternVaterCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIPITMGR</name>
+        <rename>FibuPatternBeleggruppe</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FTE</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Geschlecht</name>
+        <rename>lpGeschlecht</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>GeschlechtBez</name>
+        <rename>lpGeschlechtBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>HRMAPC</name>
+        <rename>ASMBerufCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>KantonKurz</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LEMCODE</name>
+        <rename>AustrittsgrundCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LEMKEY</name>
+        <rename>AustrittsgrundEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LEMLDESC</name>
+        <rename>AustrittsgrundBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LEMSDESC</name>
+        <rename>AustrittsgrundBezKurz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LandKurz</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Nachzahlung</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Ort</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCACODE</name>
+        <rename>PersonalkategorieCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCAKEY</name>
+        <rename>PersonalkategorieEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCALDESC</name>
+        <rename>PersonalkategorieBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCASDESC</name>
+        <rename>PersonalkategorieBezKurz</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCAUVGDE</name>
+        <rename>PersonalkategorieKeineRegulaereMA</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PCAUVGSU</name>
+        <rename>PersonalkategorieZeitBasis</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PLZ</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PROCODE</name>
+        <rename>BerufscodeCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PRODESC</name>
+        <rename>BerufscodeBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PROKEY</name>
+        <rename>BerufscodeEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PROLVL</name>
+        <rename>BerufscodeStufe</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Periode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Personalkategorie</name>
+        <rename>lpPersonalkategorie</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PersonalkategorieGruppe1</name>
+        <rename>lpPersonalkategorieGruppe1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SSEACNUM</name>
+        <rename>AHVAusgleichskasseMitgliedNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SSECODE</name>
+        <rename>AHVAusgleichskasseCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SSEDESC</name>
+        <rename>AHVAusgleichskasseBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SSEKEY</name>
+        <rename>AHVAusgleichskasseEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVGBS</name>
+        <rename>UVGCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVGDESC</name>
+        <rename>UVGBez</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVICONNR</name>
+        <rename>VersicherungVertragNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVICUSNO</name>
+        <rename>VersicherungSubNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVIID</name>
+        <rename>VersicherungEnumerator</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVINAME</name>
+        <rename>VersicherungName</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UVISUBNO</name>
+        <rename>VersicherungKundenNr</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Unternehmen</name>
+        <rename>lpUnternehmen</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UnternehmenGruppe1</name>
+        <rename>lpUnternehmenGruppe1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Vertragsart</name>
+        <rename>lpVertragsart</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>VertragsartGruppe1</name>
+        <rename>lpVertragsartGruppe1</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idAustrittsgrund</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idEintrittsgrund</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idGeschlecht</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idPersonalkategorie</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idUnternehmen</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idVertragsart</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitAustritt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitAustrittEffektiv</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitAustrittKuendigung</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitAustrittPK</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitEintritt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitEintrittEffektiv</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitEintrittPK</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitEintrittTheoretisch</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitGeburtstag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitGestorben</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>idZeitProbezeitEnde</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>KalenderEnumerator</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>KalenderCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>KalenderBez</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ArbeitstagEnumerator</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ArbeitstagCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ArbeitstagBez</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>BURNr</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>BURBez</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>AlterJahre</name>
+        <rename>AlterJahre</rename>
+        <type>Integer</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>AustrittsPeriode</name>
+        <rename>AustrittsPeriode</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Nachzahlung</name>
+        <rename>Nachzahlung</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Eintrittsperiode</name>
+        <rename>Eintrittsperiode</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>AustrittsPeriodeNetto</name>
+        <rename>AustrittsPeriodeNetto</rename>
+        <type>Integer</type>
+        <length>1</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>246</xloc>
+      <yloc>1335</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>lp_t_dim_Mitarbeiter</name>
+    <type>DimensionLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>lp_t_dim_Mitarbeiter</table>
+      <connection>Pentaho_DWH</connection>
+      <commit>100</commit>
+      <update>Y</update>
+      <fields>
+        <key>
+          <name>EMPKEY</name>
+          <lookup>EMPKEY</lookup>
+        </key>
+        <key>
+          <name>CONNUMB</name>
+          <lookup>CONNUMB</lookup>
+        </key>
+        <date>
+          <name>DatumVon</name>
+          <from>DatumVon</from>
+          <to>DatumBis</to>
+        </date>
+        <field>
+          <name>AHVAusgleichskasseBez</name>
+          <lookup>AHVAusgleichskasseBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AHVAusgleichskasseCode</name>
+          <lookup>AHVAusgleichskasseCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AHVAusgleichskasseEnumerator</name>
+          <lookup>AHVAusgleichskasseEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AHVAusgleichskasseMitgliedNr</name>
+          <lookup>AHVAusgleichskasseMitgliedNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ASMBerufBez</name>
+          <lookup>ASMBerufBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ASMBerufCode</name>
+          <lookup>ASMBerufCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ASMBerufKey</name>
+          <lookup>ASMBerufKey</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbrechnungskreisBez</name>
+          <lookup>AbrechnungskreisBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AbrechnungskreisCode</name>
+          <lookup>AbrechnungskreisCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Adresszeile1</name>
+          <lookup>Adresszeile1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Adresszeile2</name>
+          <lookup>Adresszeile2</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AdresszeileNr</name>
+          <lookup>AdresszeileNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AdresszeileNrCode</name>
+          <lookup>AdresszeileNrCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AlterGruppe1</name>
+          <lookup>AlterGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AlterGruppe2</name>
+          <lookup>AlterGruppe2</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AlterGruppe3</name>
+          <lookup>AlterGruppe3</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AlterJahre</name>
+          <lookup>AlterJahre</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Austritt</name>
+          <lookup>Austritt</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittBemerkung</name>
+          <lookup>AustrittBemerkung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittEffektiv</name>
+          <lookup>AustrittEffektiv</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittJahr</name>
+          <lookup>AustrittJahr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittKuendigung</name>
+          <lookup>AustrittKuendigung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittMonat</name>
+          <lookup>AustrittMonat</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittPK</name>
+          <lookup>AustrittPK</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsPeriode</name>
+          <lookup>AustrittsPeriode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsgrundBez</name>
+          <lookup>AustrittsgrundBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsgrundBezKurz</name>
+          <lookup>AustrittsgrundBezKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsgrundCode</name>
+          <lookup>AustrittsgrundCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsgrundEnumerator</name>
+          <lookup>AustrittsgrundEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>AustrittsPeriodeNetto</name>
+          <lookup>AustrittsPeriodeNetto</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BG</name>
+          <lookup>BG</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BerufscodeBez</name>
+          <lookup>BerufscodeBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BerufscodeCode</name>
+          <lookup>BerufscodeCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BerufscodeEnumerator</name>
+          <lookup>BerufscodeEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BerufscodeStufe</name>
+          <lookup>BerufscodeStufe</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Eintritt</name>
+          <lookup>Eintritt</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittBemerkung</name>
+          <lookup>EintrittBemerkung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittEffektiv</name>
+          <lookup>EintrittEffektiv</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittJahr</name>
+          <lookup>EintrittJahr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittMonat</name>
+          <lookup>EintrittMonat</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittPK</name>
+          <lookup>EintrittPK</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittTheoretisch</name>
+          <lookup>EintrittTheoretisch</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittsgrundBez</name>
+          <lookup>EintrittsgrundBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittsgrundBezKurz</name>
+          <lookup>EintrittsgrundBezKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittsgrundCode</name>
+          <lookup>EintrittsgrundCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>EintrittsgrundEnumerator</name>
+          <lookup>EintrittsgrundEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Eintrittsperiode</name>
+          <lookup>Eintrittsperiode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FTE</name>
+          <lookup>FTE</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FamilienausgleichskasseBez</name>
+          <lookup>FamilienausgleichskasseBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FamilienausgleichskasseCode</name>
+          <lookup>FamilienausgleichskasseCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FamilienausgleichskasseEnumerator</name>
+          <lookup>FamilienausgleichskasseEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FamilienausgleichskasseKundenNr</name>
+          <lookup>FamilienausgleichskasseKundenNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternBeleggruppe</name>
+          <lookup>FibuPatternBeleggruppe</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternBezeichnung</name>
+          <lookup>FibuPatternBezeichnung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternCode</name>
+          <lookup>FibuPatternCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternUnternehmen</name>
+          <lookup>FibuPatternUnternehmen</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternUnternehmenBez</name>
+          <lookup>FibuPatternUnternehmenBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>FibuPatternVaterCode</name>
+          <lookup>FibuPatternVaterCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Geburtstag</name>
+          <lookup>Geburtstag</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>GesellschaftBez</name>
+          <lookup>GesellschaftBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>GesellschaftCode</name>
+          <lookup>GesellschaftCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Gestorben</name>
+          <lookup>Gestorben</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>KSTBez</name>
+          <lookup>KSTBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KSTBezKurz</name>
+          <lookup>KSTBezKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KSTEnumerator</name>
+          <lookup>KSTEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KantonKurz</name>
+          <lookup>KantonKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>LandKurz</name>
+          <lookup>LandKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>MaNR</name>
+          <lookup>MaNR</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>Nachzahlung</name>
+          <lookup>Nachzahlung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Name</name>
+          <lookup>Name</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>NameVorname</name>
+          <lookup>NameVorname</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>Ort</name>
+          <lookup>Ort</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PLZ</name>
+          <lookup>PLZ</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieBez</name>
+          <lookup>PersonalkategorieBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieBezKurz</name>
+          <lookup>PersonalkategorieBezKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieCode</name>
+          <lookup>PersonalkategorieCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieEnumerator</name>
+          <lookup>PersonalkategorieEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieKeineRegulaereMA</name>
+          <lookup>PersonalkategorieKeineRegulaereMA</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>PersonalkategorieZeitBasis</name>
+          <lookup>PersonalkategorieZeitBasis</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ProbezeitEnde</name>
+          <lookup>ProbezeitEnde</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Sprache</name>
+          <lookup>Sprache</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>UVGBez</name>
+          <lookup>UVGBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>UVGCode</name>
+          <lookup>UVGCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>UnternehmenBez</name>
+          <lookup>UnternehmenBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>UnternehmenNr</name>
+          <lookup>UnternehmenNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VersicherungEnumerator</name>
+          <lookup>VersicherungEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VersicherungKundenNr</name>
+          <lookup>VersicherungKundenNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VersicherungName</name>
+          <lookup>VersicherungName</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VersicherungSubNr</name>
+          <lookup>VersicherungSubNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VersicherungVertragNr</name>
+          <lookup>VersicherungVertragNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VertragsartBez</name>
+          <lookup>VertragsartBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VertragsartBezKurz</name>
+          <lookup>VertragsartBezKurz</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VertragsartCode</name>
+          <lookup>VertragsartCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>VertragsartEnumerator</name>
+          <lookup>VertragsartEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>Vorname</name>
+          <lookup>Vorname</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>idAustrittsgrund</name>
+          <lookup>idAustrittsgrund</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idEintrittsgrund</name>
+          <lookup>idEintrittsgrund</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idGeschlecht</name>
+          <lookup>idGeschlecht</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>idPersonalkategorie</name>
+          <lookup>idPersonalkategorie</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idUnternehmen</name>
+          <lookup>idUnternehmen</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idVertragsart</name>
+          <lookup>idVertragsart</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitAustritt</name>
+          <lookup>idZeitAustritt</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitAustrittEffektiv</name>
+          <lookup>idZeitAustrittEffektiv</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitAustrittKuendigung</name>
+          <lookup>idZeitAustrittKuendigung</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitAustrittPK</name>
+          <lookup>idZeitAustrittPK</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitEintritt</name>
+          <lookup>idZeitEintritt</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitEintrittEffektiv</name>
+          <lookup>idZeitEintrittEffektiv</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitEintrittPK</name>
+          <lookup>idZeitEintrittPK</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitEintrittTheoretisch</name>
+          <lookup>idZeitEintrittTheoretisch</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>idZeitGeburtstag</name>
+          <lookup>idZeitGeburtstag</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>idZeitGestorben</name>
+          <lookup>idZeitGestorben</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>idZeitProbezeitEnde</name>
+          <lookup>idZeitProbezeitEnde</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpAustrittsgrund</name>
+          <lookup>lpAustrittsgrund</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpAustrittsgrundGruppe1</name>
+          <lookup>lpAustrittsgrundGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpAustrittsgrundNetto</name>
+          <lookup>lpAustrittsgrundNetto</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpEintrittsgrund</name>
+          <lookup>lpEintrittsgrund</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpEintrittsgrundGruppe1</name>
+          <lookup>lpEintrittsgrundGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpGeschlecht</name>
+          <lookup>lpGeschlecht</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>lpGeschlechtBez</name>
+          <lookup>lpGeschlechtBez</lookup>
+          <update>Update</update>
+        </field>
+        <field>
+          <name>lpPersonalkategorie</name>
+          <lookup>lpPersonalkategorie</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpPersonalkategorieGruppe1</name>
+          <lookup>lpPersonalkategorieGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpUnternehmen</name>
+          <lookup>lpUnternehmen</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpUnternehmenGruppe1</name>
+          <lookup>lpUnternehmenGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpVertragsart</name>
+          <lookup>lpVertragsart</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>lpVertragsartGruppe1</name>
+          <lookup>lpVertragsartGruppe1</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KalenderEnumerator</name>
+          <lookup>KalenderEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KalenderCode</name>
+          <lookup>KalenderCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>KalenderBez</name>
+          <lookup>KalenderBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ArbeitstagEnumerator</name>
+          <lookup>ArbeitstagEnumerator</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ArbeitstagCode</name>
+          <lookup>ArbeitstagCode</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>ArbeitstagBez</name>
+          <lookup>ArbeitstagBez</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BURNr</name>
+          <lookup>BURNr</lookup>
+          <update>Insert</update>
+        </field>
+        <field>
+          <name>BURBez</name>
+          <lookup>BURBez</lookup>
+          <update>Insert</update>
+        </field>
+        <return>
+          <name>idMitarbeiter</name>
+          <rename/>
+          <creation_method>tablemax</creation_method>
+          <use_autoinc>N</use_autoinc>
+          <version>version</version>
+        </return>
+      </fields>
+      <sequence/>
+      <min_year>1900</min_year>
+      <max_year>2199</max_year>
+      <cache_size>5000</cache_size>
+      <preload_cache>N</preload_cache>
+      <use_start_date_alternative>N</use_start_date_alternative>
+      <start_date_alternative>none</start_date_alternative>
+      <start_date_field_name/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>246</xloc>
+      <yloc>1455</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>
