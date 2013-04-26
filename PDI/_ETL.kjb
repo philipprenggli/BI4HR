@@ -338,8 +338,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>402</xloc>
-      <yloc>612</yloc>
+      <xloc>255</xloc>
+      <yloc>602</yloc>
       </entry>
     <entry>
       <name>Job</name>
@@ -370,6 +370,27 @@
       <xloc>291</xloc>
       <yloc>709</yloc>
       </entry>
+    <entry>
+      <name>DUMMY</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>285</xloc>
+      <yloc>771</yloc>
+      </entry>
+
   </entries>
   <hops>
     <hop>
@@ -419,7 +440,7 @@
     </hop>
     <hop>
       <from>Neues Features Master</from>
-      <to>Job</to>
+      <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
