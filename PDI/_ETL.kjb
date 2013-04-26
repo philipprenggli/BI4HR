@@ -352,13 +352,6 @@
   </hops>
   <notepads>
     <notepad>
-      <note>Test Notiz 051 Branch</note>
-      <xloc>435</xloc>
-      <yloc>62</yloc>
-      <width>139</width>
-      <heigth>25</heigth>
-      <fontname>Arial</fontname>
-      <fontsize>10</fontsize>
       <note>Test Kommentar Master</note>
       <xloc>502</xloc>
       <yloc>82</yloc>
