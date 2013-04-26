@@ -359,6 +359,13 @@
       <heigth>25</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
+      <note>Test Kommentar Master</note>
+      <xloc>502</xloc>
+      <yloc>82</yloc>
+      <width>149</width>
+      <heigth>25</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
       <fontbold>N</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
